@@ -1,325 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weekly Summary — April 21–27, 2026 | Santiago Arango | LLF</title>
+  <title>Weekly Summary — April 21–27, 2026 | Lisinski Law Firm</title>
   <style>
-    :root {
-      --bg: #0d1117;
-      --surface: #161b22;
-      --surface2: #21262d;
-      --border: #30363d;
-      --accent: #1f6feb;
-      --accent2: #388bfd;
-      --text: #e6edf3;
-      --text-muted: #8b949e;
-      --green: #3fb950;
-      --yellow: #d29922;
-      --red: #f85149;
-      --purple: #a371f7;
-      --teal: #39d353;
-    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      padding: 0;
     }
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 24px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .header {
+      background: linear-gradient(135deg, #1c2a3a 0%, #0f1f2e 100%);
+      border-bottom: 3px solid #1f6feb;
+      padding: 40px 48px 32px;
     }
-    .logo { font-size: 18px; font-weight: 700; color: var(--accent2); letter-spacing: 0.5px; }
-    .logo span { color: var(--text-muted); font-weight: 400; font-size: 14px; }
-    .week-badge {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 6px 16px;
+    .header .firm-name {
       font-size: 13px;
-      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #58a6ff;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
-    .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
-    h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
-    .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 36px; }
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #f0f6fc;
+      margin-bottom: 6px;
+    }
+    .header .date-range {
+      color: #8b949e;
+      font-size: 14px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 48px 80px;
+    }
+    .section {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      transition: border-color 0.2s;
+    }
+    .section:hover { border-color: #58a6ff44; }
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f0f6fc;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #21262d;
+    }
+    .section p, .section li {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #c9d1d9;
+    }
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .section ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #58a6ff;
+      font-weight: bold;
+    }
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: 12px;
-      margin-bottom: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
     }
     .stat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: #0d1117;
+      border: 1px solid #30363d;
       border-radius: 8px;
-      padding: 16px;
+      padding: 18px 16px;
       text-align: center;
     }
-    .stat-number { font-size: 28px; font-weight: 700; color: var(--accent2); }
-    .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
-    .section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      margin-bottom: 20px;
-      overflow: hidden;
+    .stat-card .stat-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #58a6ff;
     }
-    .section-header {
-      background: var(--surface2);
-      padding: 14px 20px;
-      border-bottom: 1px solid var(--border);
-      font-size: 15px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .stat-card .stat-label {
+      font-size: 12px;
+      color: #8b949e;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .section-header .emoji { font-size: 18px; }
-    .section-body { padding: 20px; }
-    .section-body p { margin-bottom: 12px; color: var(--text); }
-    .section-body p:last-child { margin-bottom: 0; }
-    .item {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .item:last-child { border-bottom: none; padding-bottom: 0; }
-    .item-title { font-weight: 600; margin-bottom: 4px; }
-    .item-desc { font-size: 13px; color: var(--text-muted); }
-    .tag {
+    .badge {
       display: inline-block;
+      background: #1f6feb22;
+      border: 1px solid #1f6feb55;
+      color: #58a6ff;
+      border-radius: 4px;
       padding: 2px 8px;
-      border-radius: 12px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       margin-right: 6px;
     }
-    .tag-green { background: rgba(63,185,80,0.15); color: var(--green); }
-    .tag-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); }
-    .tag-red { background: rgba(248,81,73,0.15); color: var(--red); }
-    .tag-blue { background: rgba(31,111,235,0.15); color: var(--accent2); }
-    .tag-purple { background: rgba(163,113,247,0.15); color: var(--purple); }
-    .person-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 10px;
-    }
-    .person-card {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px 14px;
-    }
-    .person-name { font-weight: 600; font-size: 14px; }
-    .person-role { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
-    .theme-bar {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .theme-bar:last-child { border-bottom: none; padding-bottom: 0; }
-    .theme-name { font-weight: 600; min-width: 200px; }
-    .theme-desc { font-size: 13px; color: var(--text-muted); }
-    footer {
+    .footer {
       text-align: center;
-      padding: 30px;
-      color: var(--text-muted);
-      font-size: 12px;
-      border-top: 1px solid var(--border);
+      padding: 32px;
+      color: #484f58;
+      font-size: 13px;
+      border-top: 1px solid #21262d;
       margin-top: 40px;
     }
-    footer strong { color: var(--accent2); }
+    .footer strong { color: #58a6ff; }
+    strong { color: #f0f6fc; }
   </style>
 </head>
 <body>
-<header>
-  <div class="logo">Lisinski Law Firm <span>| Personal Dashboard</span></div>
-  <div class="week-badge">Week of Apr 21 – Apr 27, 2026</div>
-</header>
-
-<div class="container">
-  <h1>Weekly Summary — Santiago Arango</h1>
-  <div class="subtitle">Generated Monday, April 27, 2026 · Colombia Time (UTC–5)</div>
-
-  <!-- QUICK STATS -->
-  <div class="stats-grid">
-    <div class="stat-card"><div class="stat-number">15</div><div class="stat-label">Emails Received</div></div>
-    <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">Emails Sent</div></div>
-    <div class="stat-card"><div class="stat-number">50</div><div class="stat-label">Teams Messages</div></div>
-    <div class="stat-card"><div class="stat-number">18</div><div class="stat-label">Meetings Attended</div></div>
-    <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">Mtgs Cancelled</div></div>
-    <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">Scam Trainings</div></div>
+  <div class="header">
+    <div class="firm-name">Lisinski Law Firm · Operations & Technology</div>
+    <h1>📋 Weekly Summary — Santiago Arango</h1>
+    <div class="date-range">Week of April 21–27, 2026 &nbsp;|&nbsp; Generated Monday, April 27, 2026</div>
   </div>
 
-  <!-- WINS -->
-  <div class="section">
-    <div class="section-header"><span class="emoji">🏆</span> WINS OF THE WEEK</div>
-    <div class="section-body">
-      <div class="item">
-        <div class="item-title"><span class="tag tag-green">DELIVERED</span> Paralegals Dashboard Live in Salesforce</div>
-        <div class="item-desc">Santiago completed and delivered the paralegals dashboard in Salesforce/Litify, sharing the link with Jess and Mas. It follows the same structure as the supplements specialist dashboards.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-green">DELIVERED</span> Scam Intake Form Training — 3 Sessions Completed</div>
-        <div class="item-desc">Santiago ran three separate scam intake form training sessions across Mon (15 attendees), Tue (35 attendees), and Thu (25 attendees), onboarding 75+ team members on the new client scam reporting process to address inconsistencies in submissions.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-green">RESOLVED</span> Supplements Litify Edit Permissions</div>
-        <div class="item-desc">Helpdesk (Eli) resolved the Supplements folder access ticket — moved the supplement folder to the Phase 2 Folder and granted the 3 team members full edit access. Santiago confirmed and communicated resolution to the team.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-green">DELIVERED</span> Supplements Lead Time SLA Dashboard (Power BI)</div>
-        <div class="item-desc">Jhara Ochoa delivered the Supplements Lead Time SLA dashboard to production in Power BI, covering RFE/Appeal/Refile/Renewals operations. Ready for Jessica and Shelley's review.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-blue">SETUP</span> GitHub Pages Personal Dashboard + Supabase</div>
-        <div class="item-desc">Santiago set up the PersonalDashboard GitHub repository and connected Supabase for data persistence — groundwork for the weekly summary automation now running.</div>
-      </div>
+  <div class="container">
+
+    <div class="section">
+      <h2>🏆 Wins of the Week</h2>
+      <ul>
+        <li>Led three large-group <strong>Scam Intake Form training sessions</strong> (Mon, Tue, Thu) — firm-wide rollout milestone achieved</li>
+        <li>Completed and reviewed the <strong>full ELT escalation process</strong> for high-severity scam reports with all ELT stakeholders</li>
+        <li><strong>Paralegals Salesforce/Litify dashboard</strong> finalized and delivered to Jess — following the supplements structure</li>
+        <li>Coordinated Litify <strong>edit permissions for Supplements</strong> team reports and dashboards with Eli</li>
+        <li>Attended April <strong>Firmwide Meeting</strong> and kept multiple strategic projects moving forward despite delays</li>
+      </ul>
     </div>
-  </div>
 
-  <!-- RECURRING THEMES -->
-  <div class="section">
-    <div class="section-header"><span class="emoji">📊</span> RECURRING THEMES</div>
-    <div class="section-body">
-      <div class="theme-bar">
-        <div class="theme-name"><span class="tag tag-red">DOMINANT</span> Scams Project</div>
-        <div class="theme-desc">Every single day this week touched the Scams Reporting &amp; Grievance project — training sessions, ELT process documentation, dashboard reviews, stakeholder syncs, and Teams message automations.</div>
-      </div>
-      <div class="theme-bar">
-        <div class="theme-name"><span class="tag tag-blue">ACTIVE</span> Dashboards &amp; Reporting</div>
-        <div class="theme-desc">Multiple dashboards in flight: supplements (Litify + Power BI), paralegals (Salesforce), app spec. Edit permissions issue resolved. Daily automated reports sent from Litify/Salesforce.</div>
-      </div>
-      <div class="theme-bar">
-        <div class="theme-name"><span class="tag tag-purple">ACTIVE</span> Discovery Workbook / Legal CM</div>
-        <div class="theme-desc">Continuous work on the Legal Change Management discovery workbook in collaboration with Jhara Ochoa and famador — syncs, testing, and LG naming convention reviews.</div>
-      </div>
-      <div class="theme-bar">
-        <div class="theme-name"><span class="tag tag-yellow">WATCH</span> IT Capacity &amp; Sprint Risk</div>
-        <div class="theme-desc">In the Tudo Bem weekly meeting, multiple projects flagged "at risk" for IT capacity. TRACE pushed to sprint #11, U-AOS delayed 3 weeks (Dana dependency), Carolina Lopez project still pending execution since sprint #5.</div>
-      </div>
-      <div class="theme-bar">
-        <div class="theme-name"><span class="tag tag-blue">EMERGING</span> Tool Migration: Asana → Smartsheet</div>
-        <div class="theme-desc">Jean Garcia announced that LLF is moving out of Asana soon — Smartsheet is the leading candidate. Team encouraged to explore it.</div>
-      </div>
+    <div class="section">
+      <h2>📊 Recurring Themes</h2>
+      <ul>
+        <li><span class="badge">SCAMS</span> Dominant theme of the week — daily calendar blocks for ELT process work, trainings, and dashboard review. Project nearing closure.</li>
+        <li><span class="badge">DASHBOARDS</span> Supplements, paralegals, scams, and app spec dashboards all received attention and fixes.</li>
+        <li><span class="badge">EPMO</span> Multiple at-risk projects surfaced in portfolio channel: TRACE, Court EAD/I-90/DACA, Dashboards (hypercare), U-AOS. Asana → Smartsheet migration announced.</li>
+        <li><span class="badge">DISCOVERY</span> Multiple syncs with Jhara Ochoa and solo work blocks dedicated to the Legal Change Management and Discovery Workbook projects.</li>
+      </ul>
     </div>
-  </div>
 
-  <!-- OPEN ITEMS -->
-  <div class="section">
-    <div class="section-header"><span class="emoji">⚠️</span> OPEN ITEMS</div>
-    <div class="section-body">
-      <div class="item">
-        <div class="item-title"><span class="tag tag-red">BLOCKED</span> U-AOS Project — Delayed 3 Weeks</div>
-        <div class="item-desc">Santiago confirmed U-AOS is delayed by at least 3 weeks due to a dependency on Dana. Needs proactive communication to stakeholders.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-yellow">IN PROGRESS</span> ELT Process Documentation Sign-off</div>
-        <div class="item-desc">The end-to-end scam escalation process document was in final review this week. ELT stakeholders (jkim, lamarioth, tlawrence, DaMiller, LuCaamano, damackey, EuBarragan) need to formally sign off.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-yellow">PENDING</span> Dashboards — Hypercare Through Thursday</div>
-        <div class="item-desc">Santiago noted dashboards work is being held until Thursday due to hypercare period. Follow up needed after that date.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-red">STALLED</span> Court EAD, I-90, DACA — Awaiting IT Response</div>
-        <div class="item-desc">Mar Garcia flagged that Court EAD, I-90, and DACA projects are with IT but no response received yet. Push already made.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-red">STALLED</span> TRACE Project — Extended to Sprint #11</div>
-        <div class="item-desc">TRACE project timeline extended again; now targeting sprint #11. No further context provided but pattern of delays is worth monitoring.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-yellow">PENDING</span> Carolina Lopez Project Execution</div>
-        <div class="item-desc">This project has been in Santiago's queue since February and has been delayed since sprint #5. Currently marked as rejected pending resolution.</div>
-      </div>
-      <div class="item">
-        <div class="item-title"><span class="tag tag-blue">MONITOR</span> Asana → Smartsheet Migration</div>
-        <div class="item-desc">Jean Garcia indicated migration is coming soon. No formal timeline yet — worth confirming with Sara Watson on EPMO side.</div>
-      </div>
+    <div class="section">
+      <h2>⚠️ Open Items</h2>
+      <ul>
+        <li><strong>Court EAD, I-90, DACA:</strong> Still blocked on IT. Mar has been pushing — needs direct escalation if no response by Tuesday.</li>
+        <li><strong>U-AOS project:</strong> Blocked on Dana — delayed 3+ weeks. Set a concrete check-in and communicate revised timeline proactively.</li>
+        <li><strong>Dashboards project (hypercare):</strong> Confirm completion status and whether Thursday's deadline was met.</li>
+        <li><strong>Approval Copy of Camilo / RFE Fix taskset:</strong> Both at risk in CoE bucket — need ownership decision from Jean Garcia.</li>
+        <li><strong>Litify Supplements permissions:</strong> Confirm all team members can edit after Eli's changes.</li>
+        <li><strong>Service Expansion Framework — Technology Assessment:</strong> Meeting accepted by jjohanni — prep needed.</li>
+        <li><strong>Supabase/GitHub pipeline:</strong> Both accounts set up this week — verify end-to-end automation is functional.</li>
+      </ul>
     </div>
-  </div>
 
-  <!-- KEY PEOPLE -->
-  <div class="section">
-    <div class="section-header"><span class="emoji">👥</span> KEY PEOPLE THIS WEEK</div>
-    <div class="section-body">
-      <div class="person-grid">
-        <div class="person-card">
-          <div class="person-name">Jhara Ochoa</div>
-          <div class="person-role">Top collaborator — Legal CM, Discovery Workbook, Supplements SLA Dashboard, syncs daily</div>
+    <div class="section">
+      <h2>👥 Key People This Week</h2>
+      <ul>
+        <li><strong>Jean Garcia</strong> — Team lead, weekly 1:1, project portfolio discussions, sprint planning</li>
+        <li><strong>Jhara Ochoa</strong> — Discovery Workbook & Legal Change Management close collaborator</li>
+        <li><strong>Mar Garcia</strong> — Active in portfolio risk tracking and IT follow-ups</li>
+        <li><strong>Danny Miller</strong> — Scam Reporting & Grievance stakeholder; weekly sync-up Thursday</li>
+        <li><strong>Eugenia Barragan</strong> — Legal Knowledge Management sync, ELT scam escalation</li>
+        <li><strong>Camilo Vejarano</strong> — Portfolio risk flags (TRACE, RFE Fix) raised in team channel</li>
+        <li><strong>Sara Watson</strong> — EPMO Director; forwarded weekly portfolio update, EPMO meeting cancelled</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🎯 Suggestions for Next Week</h2>
+      <ul>
+        <li>Escalate IT-blocking items (Court EAD/I-90/DACA) — schedule a direct conversation if no response by Tuesday</li>
+        <li>Set a concrete check-in date with Dana on U-AOS and communicate revised timeline to stakeholders</li>
+        <li>Identify remaining Scams hypercare tasks and set a firm project closure date</li>
+        <li>Clarify CoE scope for Approval Copy of Camilo and RFE Fix taskset — bring to Jean Garcia for a decision</li>
+        <li>Assess Asana → Smartsheet migration impact on team workflows and communicate proactively</li>
+        <li>Run end-to-end test of the Supabase/GitHub weekly summary pipeline</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📈 Quick Stats</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">25</div>
+          <div class="stat-label">Emails Received</div>
         </div>
-        <div class="person-card">
-          <div class="person-name">Jean Garcia</div>
-          <div class="person-role">Lead / manager — weekly 1:1, Tudo Bem team meeting, Asana announcement, Claude Training share</div>
+        <div class="stat-card">
+          <div class="stat-value">15</div>
+          <div class="stat-label">Emails Sent</div>
         </div>
-        <div class="person-card">
-          <div class="person-name">Danny Miller (DaMiller)</div>
-          <div class="person-role">ELT Stakeholder for Scams — weekly sync, ELT process sign-off</div>
+        <div class="stat-card">
+          <div class="stat-value">50</div>
+          <div class="stat-label">Teams Threads</div>
         </div>
-        <div class="person-card">
-          <div class="person-name">Eu Barragan</div>
-          <div class="person-role">Legal KM, Scams ELT stakeholder, weekly KM sync</div>
+        <div class="stat-card">
+          <div class="stat-value">22</div>
+          <div class="stat-label">Meetings</div>
         </div>
-        <div class="person-card">
-          <div class="person-name">Mar Garcia</div>
-          <div class="person-role">EPMO team — project risk flags, Tudo Bem weekly</div>
+        <div class="stat-card">
+          <div class="stat-value">2</div>
+          <div class="stat-label">Cancelled</div>
         </div>
-        <div class="person-card">
-          <div class="person-name">Sara Watson</div>
-          <div class="person-role">EPMO Director — weekly portfolio update, EPMO Team Meeting (cancelled this week)</div>
-        </div>
-        <div class="person-card">
-          <div class="person-name">Alan Soto</div>
-          <div class="person-role">DM interactions — report task cleanup, field questions</div>
-        </div>
-        <div class="person-card">
-          <div class="person-name">Camilo Vejarano</div>
-          <div class="person-role">EPMO sprint planning, project risk discussions</div>
+        <div class="stat-card">
+          <div class="stat-value">Jean G.</div>
+          <div class="stat-label">Top Correspondent</div>
         </div>
       </div>
     </div>
+
   </div>
 
-  <!-- SUGGESTIONS -->
-  <div class="section">
-    <div class="section-header"><span class="emoji">🎯</span> SUGGESTIONS FOR NEXT WEEK</div>
-    <div class="section-body">
-      <div class="item">
-        <div class="item-title">1. Close the ELT Sign-off Loop on Scams</div>
-        <div class="item-desc">The process doc is ready — send the formal sign-off document to jkim, lamarioth, tlawrence, DaMiller, LuCaamano, damackey, EuBarragan, and cschinnour as soon as possible to officially close out this major deliverable.</div>
-      </div>
-      <div class="item">
-        <div class="item-title">2. Communicate U-AOS Delay Proactively</div>
-        <div class="item-desc">A 3-week delay is significant. Send a written update to stakeholders with a revised timeline and clear statement of the Dana dependency to manage expectations before they come asking.</div>
-      </div>
-      <div class="item">
-        <div class="item-title">3. Escalate IT Silence on Court EAD, I-90, DACA</div>
-        <div class="item-desc">Mar already pushed once with no response. Consider looping in Jean Garcia or escalating through EPMO to unblock these projects before they become sprint-level issues.</div>
-      </div>
-      <div class="item">
-        <div class="item-title">4. Start Exploring Smartsheet</div>
-        <div class="item-desc">The Asana migration is coming. Getting ahead of the learning curve now — especially for your automated dashboards and reports — will save significant scrambling when the switch happens.</div>
-      </div>
-      <div class="item">
-        <div class="item-title">5. Confirm Dashboards Hypercare End Date</div>
-        <div class="item-desc">You said dashboards work resumes Thursday. Make sure that timeline is still valid and flag any blockers early in the week so you don't lose another sprint cycle.</div>
-      </div>
-    </div>
+  <div class="footer">
+    Generated by <strong>Madison</strong> &nbsp;|&nbsp; Lisinski Law Firm &nbsp;|&nbsp; Week ending April 27, 2026
   </div>
-
-</div>
-
-<footer>
-  Generated by <strong>Madison</strong> | Lisinski Law Firm &nbsp;·&nbsp; Week of Apr 21–27, 2026 &nbsp;·&nbsp; Santiago Arango
-</footer>
 </body>
 </html>
