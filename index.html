@@ -201,7 +201,19 @@
         <div id="last-updated">Loading…</div>
         <button class="refresh-btn" onclick="loadDigest()" style="margin-top:8px">↻ Refresh</button>
       </div>
-    </header>
+        <a href="eod-summaries/latest.html" style="
+      display:inline-flex; align-items:center; gap:6px;
+      background:#1e2535; border:1px solid #2d3748;
+      color:#94a3b8; text-decoration:none;
+      font-size:0.78rem; font-weight:600;
+      padding:7px 14px; border-radius:8px;
+      transition:background 0.15s, color 0.15s;
+      white-space:nowrap;
+    " onmouseover="this.style.background='#2d3748';this.style.color='#e2e8f0'"
+       onmouseout="this.style.background='#1e2535';this.style.color='#94a3b8'">
+      &#128203; EOD Summary
+    </a>
+  </header>
 
     <div class="stats" id="stats" style="display:none">
       <div class="stat-card">
