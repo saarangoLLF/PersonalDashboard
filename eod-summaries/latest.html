@@ -1,144 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>EOD Summary — April 29, 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EOD Summary — April 30, 2026</title>
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f6fa;color:#222;line-height:1.6}
-  .header{background:#0A1628;color:#fff;padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-  .header h1{font-size:1.5rem;font-weight:700;letter-spacing:0.5px}
-  .header .meta{font-size:0.82rem;color:#b0bec5;text-align:right}
-  .gold{color:#C9A84C}
-  .container{max-width:800px;margin:32px auto;padding:0 16px 48px}
-  .section{background:#fff;border-radius:10px;padding:24px 28px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-  .section h2{font-size:1.1rem;font-weight:700;color:#0A1628;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-  .section p,.section li{font-size:0.93rem;color:#333;margin-bottom:8px}
-  ul{padding-left:20px}
-  li{margin-bottom:6px}
-  .tag{display:inline-block;background:#e8f0fe;color:#1a56db;border-radius:4px;font-size:0.75rem;padding:1px 7px;margin-left:6px;vertical-align:middle}
-  .tag.warn{background:#fff3cd;color:#856404}
-  .tag.red{background:#fde8e8;color:#b91c1c}
-  .stats-table{width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:8px}
-  .stats-table th{background:#0A1628;color:#fff;padding:9px 14px;text-align:left;font-weight:600}
-  .stats-table td{padding:9px 14px;border-bottom:1px solid #eee}
-  .stats-table tr:last-child td{border-bottom:none}
-  .stats-table tr:nth-child(even) td{background:#f8f9fc}
-  .number{font-size:1.4rem;font-weight:700;color:#C9A84C}
-  .kpi-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:4px}
-  .kpi{flex:1;min-width:120px;background:#f0f4ff;border-radius:8px;padding:14px;text-align:center}
-  .kpi .label{font-size:0.75rem;color:#666;margin-top:4px}
-  .footer{text-align:center;font-size:0.78rem;color:#999;margin-top:28px}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f6fa; color: #1a1a2e; line-height: 1.7; }
+  .header {
+    background: #0A1628;
+    color: #fff;
+    padding: 28px 32px 20px;
+    border-bottom: 4px solid #C9A84C;
+  }
+  .header h1 { font-size: 22px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .header .meta { font-size: 13px; color: #C9A84C; opacity: 0.9; }
+  .header .subtitle { font-size: 14px; color: #bcc8e0; margin-top: 2px; }
+  .container { max-width: 860px; margin: 0 auto; padding: 28px 20px 48px; }
+  .section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(10,22,40,0.07);
+    border-left: 4px solid #C9A84C;
+  }
+  .section h2 { font-size: 17px; font-weight: 700; color: #0A1628; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .section p, .section li { font-size: 14.5px; color: #2d3a4e; margin-bottom: 8px; }
+  .section ul { padding-left: 22px; }
+  .section ul li { margin-bottom: 7px; }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 11.5px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .badge-done { background: #e6f4ea; color: #2e7d32; }
+  .badge-pending { background: #fff3e0; color: #e65100; }
+  .badge-cancelled { background: #fce4ec; color: #c62828; }
+  .badge-info { background: #e3f2fd; color: #1565c0; }
+  .stats-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  .stats-table th { background: #0A1628; color: #C9A84C; padding: 10px 16px; text-align: left; font-size: 13px; font-weight: 600; }
+  .stats-table td { padding: 10px 16px; font-size: 14px; border-bottom: 1px solid #eee; }
+  .stats-table tr:last-child td { border-bottom: none; }
+  .stats-table tr:nth-child(even) td { background: #f8f9fb; }
+  .highlight { color: #C9A84C; font-weight: 700; }
+  .footer { text-align: center; font-size: 12px; color: #8090a8; margin-top: 32px; padding-top: 16px; border-top: 1px solid #e0e4ee; }
+  .llf-brand { color: #0A1628; font-weight: 700; }
+  .meeting-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; padding: 10px 12px; background: #f8f9fb; border-radius: 7px; }
+  .meeting-time { font-size: 12.5px; color: #5a6a7e; min-width: 105px; font-weight: 600; padding-top: 1px; }
+  .meeting-title { font-size: 14px; color: #1a1a2e; }
+  .meeting-attendees { font-size: 12px; color: #7a8a9e; margin-top: 2px; }
+  .observation-item { display: flex; gap: 10px; margin-bottom: 10px; padding: 10px 14px; border-radius: 7px; background: #f0f4ff; border-left: 3px solid #0A1628; }
 </style>
 </head>
 <body>
+
 <div class="header">
-  <div>
-    <h1>📋 End-of-Day Summary</h1>
-    <div style="color:#C9A84C;font-size:0.95rem;margin-top:4px;font-weight:600">Santiago Arango · Lisinski Law Firm</div>
-  </div>
-  <div class="meta">
-    <div>📅 Wednesday, April 29, 2026</div>
-    <div>🕙 Generated: 5:30 PM Colombia Time</div>
-    <div>📍 America/Bogota (UTC-5)</div>
-  </div>
+  <h1>📋 End-of-Day Summary — Santiago Arango</h1>
+  <div class="meta">April 30, 2026 &nbsp;|&nbsp; Generated at 5:30 PM Colombia (UTC-5)</div>
+  <div class="subtitle">Lisinski Law Firm &nbsp;·&nbsp; saarango@lisinskifirm.com</div>
 </div>
 
 <div class="container">
 
-  <!-- KPI Row -->
-  <div class="section">
-    <div class="kpi-row">
-      <div class="kpi"><div class="number">23</div><div class="label">Emails Received</div></div>
-      <div class="kpi"><div class="number">2</div><div class="label">Emails Sent</div></div>
-      <div class="kpi"><div class="number">4</div><div class="label">Meetings Completed</div></div>
-      <div class="kpi"><div class="number">1</div><div class="label">Cancelled</div></div>
-    </div>
-  </div>
-
-  <!-- What Got Done -->
+  <!-- WHAT GOT DONE -->
   <div class="section">
     <h2>✅ What Got Done Today</h2>
+    <p>A full and high-output day — the Service Expansion Framework was the centerpiece. Santiago ran three back-to-back stakeholder assessments in the morning, covering <strong>Business Development</strong> (with Matthew Wentzel and Jhara Ochoa), <strong>Technology</strong> (with Josh Johanni and Jhara Ochoa), and <strong>Finance</strong> (with Bryan Vehonsky and Jhara Ochoa). Each session gathered departmental input on the framework from a service development perspective.</p>
     <ul>
-      <li><strong>Legal SharePoint — Automation Checkpoint:</strong> Santiago formally scheduled the next phase review by sending the "Legal Sharepoint: automation checkpoint" meeting invite to the team, moving the project forward after a busy sprint.</li>
-      <li><strong>Legal SharePoint — Mock-Up Review Cancelled:</strong> Santiago proactively cancelled the "Legal Sharepoint repository – mock up review" session with a clear note that communication will continue via chat until the next session. Carlos Soto (casoto) had declined, and the decision to cancel rather than proceed with an incomplete group was the right call.</li>
-      <li><strong>Legal Knowledge Management — Weekly Sync</strong> <span class="tag">✅ Completed</span>: Attended the recurring LKM sync with Eugenio Barragan, Fatima Amador, and Jhara Ochoa at 11:30 AM.</li>
-      <li><strong>Detention Prevention Sync</strong> <span class="tag">✅ Completed</span>: Had a dedicated sync with Jhara Ochoa at 12:00 PM. The thread on "Detention Prevention – Legal Confirmation Needed" was active — Jhara looped in Shelley Henry and continued escalating to legal stakeholders (Cristian Garcia, Joe Lord).</li>
-      <li><strong>LG Standard Template — LLT Feedback Session</strong> <span class="tag">✅ Completed</span>: Attended the Legal Guidance standard template feedback pilot session organized by Fatima Amador at 2:00 PM, with Joe Lord, Cristian Garcia, Eugenio Barragan, and others.</li>
-      <li><strong>Discovery Workbook Sync</strong> <span class="tag">✅ Completed</span>: Attended the Discovery workbook sync with Jhara at 4:00 PM. Santiago shared the Legal SharePoint link and suggested scheduling a proper follow-up review for the next day after 10 AM EST if Jhara couldn't access the site.</li>
-      <li><strong>UAT Progress — U-AOS Derv Taskset:</strong> Santiago messaged Dana confirming the U-AOS Preparation Derv taskset in UAT is working correctly, with one remaining issue to resolve.</li>
-      <li><strong>Service Expansion Framework Notes:</strong> After Bryan's Finance assessment responses came in, Santiago sent substantive notes proposing a sequential tab-filling approach and asking for a profit margin helper field — showing active synthesis of the framework inputs.</li>
-      <li><strong>Scam Initiatives Sync-Up Organized:</strong> Multiple colleagues (Lucia Caamano, Paige Calvert, Sofia Costantino) accepted Santiago's "Scam-related initiatives sync-up" invite — the meeting is confirmed and well-attended.</li>
-      <li><strong>Asana Task Review:</strong> Santiago had a self-directed block (9:30 AM) to review and plan Asana tasks. The Asana digest noted 6 due-soon tasks including UAT, Hypercare Monitoring Period, and project hand-off items.</li>
+      <li><span class="badge badge-done">Done</span> <strong>Service Expansion Framework — BD Assessment</strong> (9:30–10:00 AM) with Matthew Wentzel &amp; Jhara Ochoa</li>
+      <li><span class="badge badge-done">Done</span> <strong>Service Expansion Framework — Technology Assessment</strong> (10:30–11:00 AM) with Josh Johanni &amp; Jhara Ochoa</li>
+      <li><span class="badge badge-done">Done</span> <strong>Service Expansion Framework — Finance Assessment</strong> (11:30 AM–12:15 PM) with Bryan Vehonsky &amp; Jhara Ochoa</li>
+      <li><span class="badge badge-done">Done</span> <strong>Review OBIM chat</strong> (8:00–8:30 AM) — completed internal review</li>
+      <li><span class="badge badge-done">Done</span> <strong>Review LCM processes and changes</strong> (8:30–9:30 AM) — deep dive on Legal Change Management updates</li>
+      <li><span class="badge badge-done">Done</span> <strong>1:1 with Jean Garcia</strong> (10:00–10:30 AM) — regular sync completed</li>
+      <li><span class="badge badge-done">Done</span> <strong>Detention Prevention — Legal Confirmation meeting</strong> (11:00–11:30 AM) with Jhara Ochoa, Cristian Garcia, Joe Lord, Shelley Henry</li>
+      <li><span class="badge badge-done">Done</span> <strong>Scams project materials meeting</strong> (1:00–1:30 PM) with Larry Marioth — reviewed scam reporting project deliverables and current workflow ahead of a dedicated ticketing system</li>
+      <li><span class="badge badge-done">Done</span> <strong>Shared Dashboard folder</strong> with Joe Tombazzi and Brandon (16:29 Col) — followed up with a reply to their responses about publishing issues</li>
+      <li><span class="badge badge-done">Done</span> <strong>Sent LCM Sync-up invites</strong> (2x — 3:46 PM and 3:56 PM Col) to align the Legal Change Management team on open items</li>
+      <li><span class="badge badge-done">Done</span> Solo work blocks completed: <em>Scams deliverables</em>, <em>Scams project close-out of finalized matters</em>, <em>Grievances close-out</em>, and <em>LCM requirements work</em></li>
+      <li><span class="badge badge-done">Done</span> Replied to active email threads including <em>Introduction to Legal Change Management Process project</em> (multiple threads with Eugenia Barragan, Jhara Ochoa, Casey Schinnour, Mitch Garber, Justin Kim) and <em>Protective Services SharePoint Ticket [ID:0028510]</em></li>
+      <li><span class="badge badge-done">Done</span> Reviewed Asana tasks — 7 tasks due soon, 3 newly assigned flagged for the day</li>
     </ul>
   </div>
 
-  <!-- Still Pending -->
+  <!-- STILL PENDING -->
   <div class="section">
     <h2>⏳ Still Pending</h2>
     <ul>
-      <li><strong>Venn Compliance Testing — Action Required by May 2</strong> <span class="tag warn">Deadline Friday</span>: Danny Miller sent a firm-wide email requiring PMO/IC/QA teams to confirm app behavior for the Venn compliance pilot starting May 4. A reply is required by May 2 confirming test outcomes. Santiago has not yet replied.</li>
-      <li><strong>Chelsea Schinnour — Comments on Script Template</strong> <span class="tag red">Unread</span>: Chelsea left two rounds of comments today on "Script Template - First response to scam concerns." The second comment (about phone number verification — Paige is checking on the 800 number) is still unread. Review and response needed.</li>
-      <li><strong>Onsist: Online Scam Protection Thread:</strong> Larry Marioth (lamarioth) asked to join a call with LLF's Onsist contact to explore whether Onsist could absorb the scam-reporting headcount request. Paige Calvert responded and said feel free. Santiago is CC'd and may need to coordinate or provide input to Larry on next steps.</li>
-      <li><strong>Detention Prevention – Legal Confirmation Needed:</strong> Jhara Ochoa has been escalating this thread to Cristian Garcia, Joe Lord, and Shelley Henry. Santiago is CC'd but the thread is active and may require a formal position or coordination response from Santiago's side.</li>
-      <li><strong>Detention Prevention — Wave 2 / Lucia Caamano Coordination:</strong> Lucia noted she will connect with Daniel tomorrow for a recap of results, since the research was done as a backup plan. Santiago may need to align with this before the results are circulated further.</li>
-      <li><strong>Carlos Soto — Scheduling Unresolved:</strong> Carlos messaged that he couldn't make it at 1 PM. Jhara was asking in Teams who Carlos Soto is and about his feedback from staff augmentation. A reschedule with Carlos is open. <span class="tag warn">Needs follow-up</span></li>
-      <li><strong>Power Automate Flow Failure:</strong> One of Santiago's Power Automate flows failed and triggered an alert. Worth investigating before it impacts downstream processes.</li>
-      <li><strong>Nely Bautista — File Upload to Intake Form:</strong> Nely uploaded a new file to the "Client Scam Notification Intake Form / Question" request. No response or acknowledgment visible yet.</li>
-      <li><strong>Service Cloud Relaunch — Action Required by May 2</strong> <span class="tag warn">Deadline Friday</span>: Andrea Rodriguez forwarded the Service Cloud Relaunch email (Saturday, May 2) — action may be required from the PMO. Worth reviewing if Santiago has a role in confirming readiness.</li>
-      <li><strong>Miro Boards:</strong> 4 boards flagged as needing attention in Miro. No action taken visible.</li>
+      <li><span class="badge badge-pending">Unreplied</span> <strong>Venn Enforcement Pilot — Follow-up for non-responders</strong> from Nica Valcanti (nicavalcanti@lisinskifirm.com, received 4:56 PM Col) — this appears to be a time-sensitive follow-up requiring a response or action</li>
+      <li><span class="badge badge-pending">Pending</span> <strong>Legal Guidance Templates — Testing Phase</strong> from Fabiola Amador (famador@lisinskifirm.com, received 8:20 AM Col) — review status unclear; Fabiola also messaged on Teams that Laura Rusk wants a quick call about the LCM document she sent this morning</li>
+      <li><span class="badge badge-pending">Action Item</span> <strong>Jhara Ochoa proposed scheduling a Monday meeting</strong> to go over the Service Expansion workbook in detail — she'll coordinate with Laura Rusk after. This needs to be confirmed and added to the calendar.</li>
+      <li><span class="badge badge-pending">Action Item</span> <strong>Possible misrepresentation to Matthew Wentzel</strong> — Santiago noted in Teams that he may have incorrectly told Matthew that the questionnaire asks whether services are for new vs. existing clients. Needs verification and correction if necessary before Monday.</li>
+      <li><span class="badge badge-pending">Pending</span> <strong>Service Cloud Rollout</strong> — Internal comms from llfcommunications@ indicate "Launch in 2 Days — What to Complete." Review what remains on Santiago's side for this rollout.</li>
+      <li><span class="badge badge-pending">Pending</span> <strong>Asana comment from Jhara</strong> — Reminder email received at 11:17 AM Col noting Jhara posted a comment on an Asana task yesterday that Santiago hasn't yet addressed.</li>
     </ul>
   </div>
 
-  <!-- Tomorrow -->
+  <!-- TOMORROW MORNING -->
   <div class="section">
-    <h2>📅 Tomorrow Morning (Thursday, April 30)</h2>
-    <ul>
-      <li><strong>9:00 AM — Bi-Weekly: Legal Change Management Update</strong><br/>
-          Organizer: J. Kim · Attendees: Chelsea Schinnour, Jhara Ochoa, Fatima Amador, Santiago, Eugenio Barragan<br/>
-          <em>Biweekly Legal Change Management check-in. Good moment to surface the Chelsea script comments and training status.</em></li>
-      <li><strong>9:30 AM — Service Expansion Framework — Business Development Assessment</strong><br/>
-          With: Matthew Wentzel & Jhara Ochoa (Teams)<br/>
-          <em>Santiago is organizing — prep the Business Development questions before the call.</em></li>
-      <li><strong>10:00 AM — 1:1 Santiago & Jean (Jean Garcia)</strong><br/>
-          Recurring 1:1. Good opportunity to flag the Venn deadline, Asana backlog, and the Carlos Soto / staff augmentation situation.</li>
-    </ul>
+    <h2>📅 Tomorrow Morning — May 1, 2026</h2>
+    <p style="margin-bottom:14px;"><span class="badge badge-info">Note</span> <strong>May 1 is Colombia's Labor Day holiday.</strong> Santiago's calendar is marked OOF for the full day. Several teammates from the AOS team are also out. However, two meetings are still scheduled — confirm whether these are proceeding.</p>
+
+    <div class="meeting-row">
+      <div class="meeting-time">All Day 🇨🇴</div>
+      <div>
+        <div class="meeting-title"><strong>Colombia Labor Day Holiday</strong></div>
+        <div class="meeting-attendees">Santiago marked OOF · AOS team also out (CO, ARG, CR)</div>
+      </div>
+    </div>
+
+    <div class="meeting-row">
+      <div class="meeting-time">9:00–10:00 AM</div>
+      <div>
+        <div class="meeting-title"><strong>Phase 2 Weekly IT Projects Sync</strong></div>
+        <div class="meeting-attendees">Organizer: Jean Garcia · Attendees: Yuri Mendonca, Jhara Ochoa, Ana Rodriguez, Viktor Kala, Camilo Vejarano, Mar Garcia, David Molano, Andres Puri</div>
+      </div>
+    </div>
+
+    <div class="meeting-row">
+      <div class="meeting-time">12:00–12:30 PM</div>
+      <div>
+        <div class="meeting-title"><strong>Scam-related initiatives sync-up</strong> <em>(Santiago organizer)</em></div>
+        <div class="meeting-attendees">Jean Garcia, Luis Guzman, Larry Marioth, Luis Caamano, Stephanie Costantino, Phil Calvert, Heather Herron, Casey Schinnour</div>
+      </div>
+    </div>
   </div>
 
-  <!-- Observations -->
+  <!-- OBSERVATIONS -->
   <div class="section">
     <h2>💡 Observations</h2>
-    <ul>
-      <li><strong>Scam initiatives are converging fast:</strong> The Onsist thread, the scam script comments, the intake form uploads, and the sync-up with Paige, Lucia, and Sofia are all moving simultaneously. This is good momentum, but the communication coordination across teams (Larry, Paige, Chelsea) needs a clear owner to avoid confusion.</li>
-      <li><strong>Two May 2 deadlines are colliding:</strong> The Venn compliance reply and the Service Cloud Relaunch both require action by Friday. Prioritize the Venn reply first — it affects a larger team and has a testing period starting May 4.</li>
-      <li><strong>Projects Touchpoint was cancelled:</strong> The meeting with jrichburg, Mar Garcia, and cavejarano was cancelled by the organizer. It was marked high-importance — worth understanding if it was rescheduled or just dropped.</li>
-      <li><strong>Carlos Soto situation is unclear:</strong> The Teams thread suggests some performance concerns and unresolved scheduling. This could be worth getting ahead of before it becomes a blocker for the Legal SharePoint build.</li>
-      <li><strong>Power Automate failure is low-urgency but needs eyes:</strong> Automated flow failures can cascade. A quick look at the Power Automate dashboard is worth a few minutes tomorrow morning before meetings start.</li>
-      <li><strong>Santiago's calendar is self-structured and intentional:</strong> Multiple focused work blocks (scams project, LCM, review tasks) alongside 4 live meetings is a productive workday pattern. The Toggl tracking block at the end is a solid habit.</li>
-    </ul>
+
+    <div class="observation-item">
+      <div>📬</div>
+      <div><strong>Introduction to LCM Process project thread is very active.</strong> At least 6 emails came in today from different stakeholders (Casey Schinnour, Justin Kim, Mitch Garber, Jhara Ochoa, Eugenia Barragan) — all responding to the same thread. The meeting was ultimately cancelled by Eugenia, but the email discussion is clearly unresolved. This topic needs a decision or consolidation soon.</div>
+    </div>
+
+    <div class="observation-item">
+      <div>❌</div>
+      <div><strong>4 meetings were cancelled today</strong> — Bi-Weekly Legal Change Management Update (jkim), Weekly BCP/Incident Response (jegarcia), Introduction to LCM Process project (EuBarragan), and the Tudo Bem! Weekly Meeting (jegarcia — due to health issues). That's a significant number of cancellations in a single day. The LCM-related cancellations in particular may be creating drift in that project's momentum.</div>
+    </div>
+
+    <div class="observation-item">
+      <div>📊</div>
+      <div><strong>Service Expansion Framework is accelerating.</strong> Three assessment calls were completed in a single morning — Business Development, Technology, and Finance. This represents serious organizational bandwidth being committed to the framework. The loose thread from the Matthew Wentzel call (potential misrepresentation about questionnaire scope) should be resolved before the next round of sessions.</div>
+    </div>
+
+    <div class="observation-item">
+      <div>🏖️</div>
+      <div><strong>Holiday tomorrow may create follow-up delays.</strong> May 1 is a Colombia national holiday. Santiago is marked OOF, but two meetings remain on the calendar (Phase 2 IT Sync and Scam initiatives sync-up). If these proceed, context-switching from a holiday mindset may reduce productivity. The Venn Enforcement Pilot email and Jhara's proposed Monday meeting should be addressed first thing May 4 if not resolved before end of day today.</div>
+    </div>
+
+    <div class="observation-item">
+      <div>🤖</div>
+      <div><strong>AI tooling is on Santiago's radar.</strong> A Teams thread references Opus 4.7 token usage and working with Claude on what appears to be dashboard or workflow tooling. The "Welcome to Claude Code" email also arrived this morning. This looks like active experimentation — worth tracking as part of the EPMO's AI adoption posture.</div>
+    </div>
   </div>
 
-  <!-- Email Stats -->
+  <!-- EMAIL STATS -->
   <div class="section">
     <h2>📊 Email Stats</h2>
     <table class="stats-table">
-      <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Count</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
       <tbody>
-        <tr><td>Emails received today</td><td><strong>23</strong></td></tr>
-        <tr><td>Emails sent today (excl. automated reports)</td><td><strong>2</strong></td></tr>
-        <tr><td>Replied to (of received)</td><td><strong>0 / 23 (0%)</strong></td></tr>
-        <tr><td>Unreplied</td><td><strong>23</strong></td></tr>
-        <tr><td>Meetings completed</td><td><strong>4</strong></td></tr>
-        <tr><td>Meetings cancelled</td><td><strong>1</strong> (Projects Touchpoint — cancelled by organizer)</td></tr>
-        <tr><td>Unread emails at EOD</td><td><strong>1</strong> (Chelsea Schinnour — script comments)</td></tr>
+        <tr>
+          <td>Emails Received (filtered)</td>
+          <td><span class="highlight">25</span></td>
+          <td>Excluded 18 scam/report-results automated emails</td>
+        </tr>
+        <tr>
+          <td>Emails Sent</td>
+          <td><span class="highlight">4</span></td>
+          <td>LCM Sync-up (x2), Dashboard share, Dashboard reply — excludes automated Salesforce reports</td>
+        </tr>
+        <tr>
+          <td>Replied To</td>
+          <td><span class="highlight">23 of 25</span></td>
+          <td>92% response rate</td>
+        </tr>
+        <tr>
+          <td>Unreplied (actionable)</td>
+          <td><span class="highlight">2</span></td>
+          <td>Venn Enforcement Pilot (human sender) + Teams recording expiry notification</td>
+        </tr>
+        <tr>
+          <td>Meetings Completed</td>
+          <td><span class="highlight">8</span></td>
+          <td>OBIM review, LCM review, 3x Service Expansion, 1:1 Jean, Detention Prevention, Scams materials</td>
+        </tr>
+        <tr>
+          <td>Meetings Cancelled</td>
+          <td><span class="highlight">4</span></td>
+          <td>Bi-Weekly LCM Update, BCP/Incident Response, LCM Process Intro, Tudo Bem! Weekly</td>
+        </tr>
       </tbody>
     </table>
-    <p style="font-size:0.8rem;color:#888;margin-top:10px">* "Replied to" count reflects direct email replies visible in sent folder. Many received emails are automated notifications (Asana, Miro, SharePoint, Teams) that do not require replies. Estimated substantive unreplied emails: ~5.</p>
   </div>
 
   <div class="footer">
-    Generated by Madison · Lisinski Law Firm AI Partner · April 29, 2026 at 5:30 PM COL
+    Generated by <span class="llf-brand">Madison · Lisinski Law Firm</span> &nbsp;·&nbsp; April 30, 2026 at 5:30 PM Colombia (UTC-5)<br>
+    Data sources: Microsoft Outlook (Inbox + Sent), Microsoft Teams, Outlook Calendar
   </div>
 
 </div>
