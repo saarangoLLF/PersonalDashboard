@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekly Summary — April 27 – May 1, 2026 | Lisinski Law Firm</title>
+  <style>
+    :root {
+      --llf-navy: #1a2744;
+      --llf-gold: #c9a84c;
+      --llf-light: #f5f7fa;
+      --llf-white: #ffffff;
+      --llf-text: #2c3e50;
+      --llf-muted: #6b7a8d;
+      --llf-border: #dde3ed;
+      --win-bg: #eaf6ed;
+      --win-border: #27ae60;
+      --theme-bg: #eaf0fb;
+      --theme-border: #2980b9;
+      --open-bg: #fff8e1;
+      --open-border: #f39c12;
+      --people-bg: #f0eafb;
+      --people-border: #8e44ad;
+      --suggest-bg: #e8f8f5;
+      --suggest-border: #16a085;
+      --stats-bg: #fef9ec;
+      --stats-border: #c9a84c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--llf-light);
+      color: var(--llf-text);
+      line-height: 1.7;
+    }
+    header {
+      background: var(--llf-navy);
+      padding: 36px 40px 28px;
+      border-bottom: 4px solid var(--llf-gold);
+    }
+    header .firm-name {
+      color: var(--llf-gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    header h1 {
+      color: var(--llf-white);
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    header .meta {
+      color: #9aafc5;
+      font-size: 14px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 36px auto;
+      padding: 0 24px 60px;
+    }
+    .section-card {
+      background: var(--llf-white);
+      border-radius: 10px;
+      border: 1px solid var(--llf-border);
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(26,39,68,.06);
+    }
+    .section-card h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--llf-border);
+    }
+    .section-card.wins { border-left: 5px solid var(--win-border); }
+    .section-card.wins h2 { color: var(--win-border); border-color: var(--win-bg); }
+    .section-card.themes { border-left: 5px solid var(--theme-border); }
+    .section-card.themes h2 { color: var(--theme-border); border-color: var(--theme-bg); }
+    .section-card.open { border-left: 5px solid var(--open-border); }
+    .section-card.open h2 { color: var(--open-border); border-color: var(--open-bg); }
+    .section-card.people { border-left: 5px solid var(--people-border); }
+    .section-card.people h2 { color: var(--people-border); border-color: var(--people-bg); }
+    .section-card.suggestions { border-left: 5px solid var(--suggest-border); }
+    .section-card.suggestions h2 { color: var(--suggest-border); border-color: var(--suggest-bg); }
+    .section-card.stats { border-left: 5px solid var(--stats-border); }
+    .section-card.stats h2 { color: var(--llf-navy); border-color: var(--stats-bg); }
+    ul { list-style: none; padding: 0; }
+    ul li {
+      padding: 7px 0 7px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--llf-border);
+      font-size: 14.5px;
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li::before {
+      content: "›";
+      position: absolute;
+      left: 4px;
+      color: var(--llf-gold);
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 16px;
+      margin-top: 6px;
+    }
+    .stat-box {
+      background: var(--stats-bg);
+      border: 1px solid var(--stats-border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .stat-box .number {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--llf-navy);
+      line-height: 1.1;
+    }
+    .stat-box .label {
+      font-size: 11.5px;
+      color: var(--llf-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
+    }
+    .person-pill {
+      display: inline-block;
+      background: var(--people-bg);
+      border: 1px solid var(--people-border);
+      color: var(--people-border);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 4px 4px 4px 0;
+    }
+    .open-badge {
+      display: inline-block;
+      background: var(--open-bg);
+      border: 1px solid var(--open-border);
+      color: var(--open-border);
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 4px;
+      padding: 1px 7px;
+      margin-right: 6px;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+    footer {
+      background: var(--llf-navy);
+      color: #7a8fa8;
+      text-align: center;
+      font-size: 12px;
+      padding: 18px 24px;
+      border-top: 3px solid var(--llf-gold);
+    }
+    footer span { color: var(--llf-gold); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="firm-name">Lisinski Law Firm · EPMO</div>
+  <h1>Weekly Summary — April 27 – May 1, 2026</h1>
+  <div class="meta">Santiago Arango &nbsp;·&nbsp; Generated Friday, May 1, 2026 &nbsp;·&nbsp; Colombia Time (UTC−5)</div>
+</header>
+
+<div class="container">
+
+  <!-- WINS -->
+  <div class="section-card wins">
+    <h2>🏆 Wins This Week</h2>
+    <ul>
+      <li>Ran the <strong>Scam Initiatives Sync-up</strong> meeting on Colombia's Labor Day (May 1 holiday) — received direct praise from Jean Garcia for going above and beyond.</li>
+      <li>Completed and distributed the <strong>LCM Weekly Status Update</strong>, keeping the Legal Change Management workstream current for all stakeholders.</li>
+      <li>Coordinated <strong>Service Cloud launch readiness</strong> — confirmed ready state and aligned next steps with the team.</li>
+      <li>Added the <strong>VAWA DA Renewal taskset</strong> to the Declarations dashboard, expanding its coverage for the legal ops team.</li>
+      <li>Shared the <strong>Power BI Dashboard folder</strong> with relevant stakeholders, moving the data accessibility initiative forward.</li>
+    </ul>
+  </div>
+
+  <!-- THEMES -->
+  <div class="section-card themes">
+    <h2>📊 Recurring Themes</h2>
+    <ul>
+      <li><strong>Scams Ecosystem (Primary Focus):</strong> Three parallel scam-related initiatives ran concurrently this week — client guidance document, scripts/comms review, and the cross-functional sync-up. This is the dominant workstream and is approaching a legal-approval gate.</li>
+      <li><strong>Legal Change Management (LCM):</strong> Weekly cadence continues with status updates, cross-team coordination, and milestone tracking. Steady progress with no blockers reported.</li>
+      <li><strong>Salesforce PP SUBS / Declarations Dashboard:</strong> Ongoing maintenance, corrections, and feature additions (VAWA DA Renewal) are a recurring weekly commitment. The dashboard is actively used and evolving.</li>
+      <li><strong>Power BI &amp; Supplements Dashboards:</strong> Build-out and permission management for internal analytics tools were a consistent thread. A publishing permission error was encountered and remains unresolved.</li>
+    </ul>
+  </div>
+
+  <!-- OPEN ITEMS -->
+  <div class="section-card open">
+    <h2>⚠️ Open Items</h2>
+    <ul>
+      <li><span class="open-badge">Blocked</span><strong>Scams scripts &amp; comms</strong> — pending legal review and approval before distribution. No ETA confirmed.</li>
+      <li><span class="open-badge">Pending</span><strong>Client Guidance for Scams document</strong> — unresolved comment (screenshots?) needs follow-up with collaborators.</li>
+      <li><span class="open-badge">Blocked</span><strong>Power BI publishing</strong> — permission error encountered; needs IT/admin escalation to unblock.</li>
+      <li><span class="open-badge">Pending</span><strong>Supplements dashboard edit permissions</strong> — unconfirmed whether the right people have been granted access.</li>
+      <li><span class="open-badge">Reschedule</span><strong>Projects Touchpoint with Jessica Richburg</strong> — needs to be rescheduled. Note: Jean Garcia is OOO Monday, May 4.</li>
+    </ul>
+  </div>
+
+  <!-- KEY PEOPLE -->
+  <div class="section-card people">
+    <h2>👥 Key People This Week</h2>
+    <div style="margin-top: 4px;">
+      <span class="person-pill">Jhara Ochoa</span>
+      <span class="person-pill">Jessica Richburg</span>
+      <span class="person-pill">Jean Garcia</span>
+      <span class="person-pill">Chelsea Schinnour</span>
+      <span class="person-pill">Jessica Kim (jkim)</span>
+      <span class="person-pill">Camilo Vejarano</span>
+      <span class="person-pill">Valeria Arevalo</span>
+    </div>
+    <p style="margin-top: 14px; font-size: 13.5px; color: var(--llf-muted);">
+      <strong>Top collaborator:</strong> Jhara Ochoa — appeared across multiple email threads and meetings, coordinating on the Scams and LCM workstreams.
+    </p>
+  </div>
+
+  <!-- SUGGESTIONS -->
+  <div class="section-card suggestions">
+    <h2>🎯 Suggestions for Next Week</h2>
+    <ul>
+      <li><strong>Close the Scams legal-approval loop</strong> — proactively follow up with legal on scripts/comms to prevent the workstream from stalling into a second week of waiting.</li>
+      <li><strong>Escalate the Power BI permission issue</strong> — identify the admin or IT contact needed to resolve the publishing block; this is a quick win if escalated early.</li>
+      <li><strong>Reschedule the Jessica Richburg touchpoint</strong> — get it on the calendar before the week fills up; Jean Garcia's Monday OOO is a scheduling factor to account for.</li>
+      <li><strong>Confirm Supplements dashboard access</strong> — do a quick verification with intended editors that they can access and edit the file.</li>
+      <li><strong>Document Scams initiative decisions</strong> — as the three scams initiatives converge toward action, create a decision log or summary doc to keep all stakeholders aligned on what was decided and who owns what.</li>
+    </ul>
+  </div>
+
+  <!-- STATS -->
+  <div class="section-card stats">
+    <h2>📈 Quick Stats</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="number">10</div>
+        <div class="label">Emails Received</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">5</div>
+        <div class="label">Emails Sent</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">50+</div>
+        <div class="label">Teams Threads</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">11</div>
+        <div class="label">Meetings Attended</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">5</div>
+        <div class="label">Meetings Cancelled</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">5</div>
+        <div class="label">Open Items</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>Madison</span> · AI Partner · Lisinski Law Firm EPMO &nbsp;|&nbsp;
+  Weekly Summary automatically generated for Santiago Arango &nbsp;|&nbsp;
+  Week of April 27 – May 1, 2026
+</footer>
+
+</body>
+</html>
