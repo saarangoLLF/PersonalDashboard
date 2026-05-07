@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-05-06T13:26:01Z",
-  "date": "2026-05-06",
-  "digestMarkdown": "# \ud83c\udf05 Morning Digest \u2014 Wednesday, May 6, 2026\n\n## \ud83d\udcec Emails Needing Attention\n\n\u26a0\ufe0f **Microsoft Outlook connector is not currently available.** Email data could not be retrieved for this run. Please check your inbox manually or reconnect the Outlook connector in Cowork settings.\n\n## \ud83d\udcac Teams \u2014 Active Conversations\n\n\u26a0\ufe0f **Microsoft Teams connector is not currently available.** Chat messages could not be retrieved for this run. Please review Teams directly for any active threads or mentions.\n\n## \ud83d\udcc5 Today's Agenda\n\n\u26a0\ufe0f **Microsoft Calendar connector is not currently available.** Calendar events could not be retrieved for this run. Please check your Outlook calendar directly for today's meetings.\n\n## \u26a1 Immediate Action\n\nThe Microsoft 365 connectors (Outlook, Teams, Calendar) were unreachable during this automated digest run. Please verify connector status in Cowork settings and reconnect if needed. No data was available to assess urgency \u2014 check your inbox and Teams directly.\n\n---\n*Generated automatically by Madison \u00b7 Lisinski Law Firm \u00b7 Run: 2026-05-06T13:26:01Z*",
+  "lastUpdated": "2026-05-07T13:24:50Z",
+  "date": "2026-05-07",
+  "digestMarkdown": "# 🌅 Morning Digest — Thursday, May 7, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ **Microsoft 365 connector unavailable** — email data could not be retrieved for this run. The MS365 plugin requires re-authentication. Please open Cowork, reconnect the Microsoft 365 plugin, and re-run the digest to see your inbox summary.\n\n## 💬 Teams — Active Conversations\n\n⚠️ **Microsoft 365 connector unavailable** — Teams messages could not be retrieved for this run.\n\n## 📅 Today's Agenda\n\n⚠️ **Microsoft 365 connector unavailable** — calendar events could not be retrieved for this run.\n\n## ⚡ Immediate Action\n\n**Action required: Re-authenticate the Microsoft 365 connector.** The digest could not pull your emails, Teams messages, or calendar for today. Open Cowork → Plugins → Microsoft 365 and complete the OAuth flow to restore your morning briefings.",
   "emailCount": 0,
   "meetingCount": 0,
-  "hasUrgent": false
+  "hasUrgent": true
 }
