@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-05-07T13:24:50Z",
-  "date": "2026-05-07",
-  "digestMarkdown": "# 🌅 Morning Digest — Thursday, May 7, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ **Microsoft 365 connector unavailable** — email data could not be retrieved for this run. The MS365 plugin requires re-authentication. Please open Cowork, reconnect the Microsoft 365 plugin, and re-run the digest to see your inbox summary.\n\n## 💬 Teams — Active Conversations\n\n⚠️ **Microsoft 365 connector unavailable** — Teams messages could not be retrieved for this run.\n\n## 📅 Today's Agenda\n\n⚠️ **Microsoft 365 connector unavailable** — calendar events could not be retrieved for this run.\n\n## ⚡ Immediate Action\n\n**Action required: Re-authenticate the Microsoft 365 connector.** The digest could not pull your emails, Teams messages, or calendar for today. Open Cowork → Plugins → Microsoft 365 and complete the OAuth flow to restore your morning briefings.",
+  "lastUpdated": "2026-05-08T13:31:00Z",
+  "date": "2026-05-08",
+  "digestMarkdown": "# 🌅 Morning Digest — Friday, May 08, 2026\n\n> ⚠️ **Microsoft Connector Unavailable** — The Outlook (email + calendar) and Teams/Chat connectors were not reachable during this run. Data below is a placeholder. Please check your connector authentication in Cowork settings.\n\n## 📬 Emails Needing Attention\n*Microsoft connector unavailable — email data could not be retrieved for this run.*\n\n## 💬 Teams — Active Conversations\n*Microsoft connector unavailable — Teams/Chat data could not be retrieved for this run.*\n\n## 📅 Today’s Agenda\n*Microsoft connector unavailable — calendar data could not be retrieved for this run.*\n\n## ⚡ Immediate Action\n⚠️ **Connector issue detected.** The Microsoft 365 connector did not respond. Please re-authenticate your Outlook/Teams connector in Cowork so your digests can resume normally. No other urgent items detected.",
   "emailCount": 0,
   "meetingCount": 0,
-  "hasUrgent": true
+  "hasUrgent": false
 }
