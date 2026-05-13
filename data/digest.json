@@ -1,8 +1,0 @@
-{
-  "lastUpdated": "2026-05-12T13:25:25Z",
-  "date": "2026-05-12",
-  "digestMarkdown": "# \ud83c\udf05 Morning Digest \u2014 Tuesday, May 12, 2026\n\n## \ud83d\udcec Emails Needing Attention\n\n> \u26a0\ufe0f Microsoft Outlook connector was unavailable during this run. Email data could not be retrieved. Please check your inbox manually or reconnect the Microsoft 365 plugin in Cowork settings.\n\n## \ud83d\udcac Teams \u2014 Active Conversations\n\n> \u26a0\ufe0f Microsoft Teams connector was unavailable during this run. Chat messages could not be retrieved.\n\n## \ud83d\udcc5 Today's Agenda\n\n> \u26a0\ufe0f Microsoft Calendar connector was unavailable during this run. Calendar data could not be retrieved. Please check Outlook for today's meetings.\n\n## \u26a1 Immediate Action\n\n**Connector Offline** \u2014 The Microsoft 365 plugin did not authenticate during this session. Santiago, please reconnect it in Cowork to restore full digest functionality. No other urgent items could be assessed due to the data gap.",
-  "emailCount": 0,
-  "meetingCount": 0,
-  "hasUrgent": false
-}
