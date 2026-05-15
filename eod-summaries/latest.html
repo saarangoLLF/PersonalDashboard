@@ -1,110 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EOD Summary — May 13, 2026</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #1a1a2e; }
-  .header { background: #0A1628; color: white; padding: 28px 32px; }
-  .header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.5px; }
-  .header .subtitle { color: #C9A84C; margin-top: 6px; font-size: 0.92rem; font-weight: 500; }
-  .header .meta { color: #8a9bb5; margin-top: 4px; font-size: 0.82rem; }
-  .container { max-width: 820px; margin: 32px auto; padding: 0 16px; }
-  .card { background: white; border-radius: 10px; padding: 28px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
-  .card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; color: #0A1628; border-bottom: 2px solid #f0f2f5; padding-bottom: 10px; }
-  .card p { color: #444; line-height: 1.7; font-size: 0.94rem; }
-  .card ul { margin-top: 8px; padding-left: 20px; }
-  .card ul li { color: #444; line-height: 1.8; font-size: 0.94rem; }
-  .alert { background: #fff8e6; border-left: 4px solid #C9A84C; border-radius: 6px; padding: 14px 18px; }
-  .alert p { color: #7a5c00; font-size: 0.92rem; line-height: 1.6; }
-  .alert strong { color: #5c4200; }
-  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-  table th { background: #0A1628; color: white; padding: 10px 14px; text-align: left; font-size: 0.88rem; }
-  table td { padding: 10px 14px; border-bottom: 1px solid #f0f2f5; font-size: 0.92rem; color: #333; }
-  table tr:last-child td { border-bottom: none; }
-  table tr:nth-child(even) td { background: #fafbfc; }
-  .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
-  .badge-warn { background: #fff3cd; color: #7a5500; }
-  .footer { text-align: center; color: #aaa; font-size: 0.78rem; padding: 24px 0; }
-  .gold { color: #C9A84C; font-weight: 700; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EOD Summary — Santiago Arango — 2026-05-14</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f6fa;
+      color: #1a1a2e;
+      min-height: 100vh;
+    }
+    header {
+      background: #0A1628;
+      color: #ffffff;
+      padding: 28px 36px 22px;
+      border-bottom: 4px solid #C9A84C;
+    }
+    header .firm-name {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 6px;
+    }
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    header .meta {
+      font-size: 13px;
+      color: #a0aec0;
+      margin-top: 6px;
+    }
+    .notice-banner {
+      background: #fff3cd;
+      border-left: 5px solid #C9A84C;
+      margin: 24px 36px 0;
+      padding: 14px 18px;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #7a5c00;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 860px;
+      margin: 24px auto;
+      padding: 0 24px 48px;
+    }
+    .section {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(10,22,40,0.08);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .section-header {
+      background: #0A1628;
+      color: #ffffff;
+      padding: 14px 22px;
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-header .icon {
+      font-size: 18px;
+    }
+    .section-body {
+      padding: 20px 22px;
+      font-size: 14px;
+      line-height: 1.75;
+      color: #2d3748;
+    }
+    .section-body p {
+      margin-bottom: 10px;
+    }
+    .section-body ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .section-body li {
+      margin-bottom: 6px;
+    }
+    .unavailable-note {
+      color: #718096;
+      font-style: italic;
+    }
+    .stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .stats-table th {
+      background: #f7f8fc;
+      color: #0A1628;
+      text-align: left;
+      padding: 10px 16px;
+      border-bottom: 2px solid #e2e8f0;
+      font-weight: 600;
+    }
+    .stats-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #2d3748;
+    }
+    .stats-table tr:last-child td {
+      border-bottom: none;
+    }
+    .stats-table .value {
+      font-weight: 600;
+      color: #0A1628;
+    }
+    .gold { color: #C9A84C; font-weight: 600; }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #a0aec0;
+      padding: 16px;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 12px;
+    }
+    footer span { color: #C9A84C; }
+  </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>📋 End-of-Day Summary — Lisinski Law Firm</h1>
-  <div class="subtitle">Santiago Arango · saarango@lisinskifirm.com</div>
-  <div class="meta">📅 Wednesday, May 13, 2026 &nbsp;·&nbsp; Generated at 17:20 (Colombia / UTC-5)</div>
+<header>
+  <div class="firm-name">Lisinski Law Firm</div>
+  <h1>End-of-Day Summary</h1>
+  <div class="meta">
+    Santiago Arango &nbsp;·&nbsp; saarango@lisinskifirm.com<br/>
+    <strong>Date:</strong> Thursday, May 14, 2026 &nbsp;·&nbsp;
+    <strong>Generated:</strong> 19:06 COT (America/Bogota, UTC‑5)
+  </div>
+</header>
+
+<div class="notice-banner">
+  ⚠️ <strong>Data Source Notice:</strong> Microsoft 365 connector tools (Outlook, Teams, Calendar) are not connected in this environment. Live email, chat, and calendar data could not be retrieved for today's summary. The sections below reflect this limitation. To enable full data retrieval, please connect the Microsoft 365 MCP connector in Cowork settings. This summary was still published to GitHub Pages and logged to Supabase for continuity.
 </div>
 
 <div class="container">
 
-  <div class="card alert">
-    <h2>⚠️ Data Collection Notice</h2>
-    <p>
-      <strong>Microsoft 365 connectors (Outlook, Teams, Calendar) are not currently connected</strong> to this Cowork session.
-      The system attempted to retrieve today's emails, Teams messages, and calendar events, but no connector tools were available.<br><br>
-      As a result, this summary was generated without live data. The sections below reflect this gracefully.
-      To enable full data collection, please connect the Microsoft 365 plugin in your Cowork settings.
-    </p>
+  <!-- WHAT GOT DONE TODAY -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">✅</span> What Got Done Today
+    </div>
+    <div class="section-body">
+      <p class="unavailable-note">Live Outlook and Teams data is unavailable — the Microsoft 365 connector is not active in this session. Email activity, replies sent, meetings attended, and decisions made could not be retrieved automatically.</p>
+      <p>To populate this section with real data, connect your Microsoft 365 account via the Cowork connector settings. Once connected, this report will list: emails sent and replied to, meetings completed, key decisions surfaced from Teams conversations, and resolved action items.</p>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>✅ What Got Done Today</h2>
-    <p>
-      Unable to retrieve email and calendar data — Microsoft 365 connectors are not connected.
-      Once connected, this section will summarize emails sent that moved things forward, meetings completed, decisions made, and action items resolved.
-    </p>
+  <!-- STILL PENDING -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">⏳</span> Still Pending
+    </div>
+    <div class="section-body">
+      <p class="unavailable-note">Pending items require access to your inbox (unreplied emails) and Teams threads (unresolved mentions). Neither was accessible in this run.</p>
+      <p>Once the Microsoft 365 connector is active, this section will automatically surface: unanswered emails received today, Teams threads where you were mentioned but haven't responded, and any open action items from conversations (flagged phrases like "can you", "please", "follow up", etc.).</p>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>⏳ Still Pending</h2>
-    <p>
-      Unable to retrieve pending items — Microsoft 365 connectors are not connected.
-      Once connected, this section will list unreplied emails, unresolved Teams threads, and outstanding tasks or requests.
-    </p>
+  <!-- TOMORROW MORNING -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">📅</span> Tomorrow Morning
+    </div>
+    <div class="section-body">
+      <p class="unavailable-note">Calendar data for tomorrow (Friday, May 15, 2026) was not retrievable — Outlook Calendar access requires the Microsoft 365 connector.</p>
+      <p>Once connected, this section will show your first 3 meetings of the next business day with time (Colombia time), topic, and attendees — so you can walk in prepared.</p>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>📅 Tomorrow Morning</h2>
-    <p>
-      Unable to retrieve tomorrow's calendar events — Microsoft 365 connectors are not connected.
-      Once connected, this section will show the first 3 meetings of the next business day (Thursday, May 14) with times in Colombia time.
-    </p>
+  <!-- OBSERVATIONS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">💡</span> Observations
+    </div>
+    <div class="section-body">
+      <p><strong>Connector Gap Detected.</strong> This is the <span class="gold">first or recurring run</span> where Microsoft 365 data was unavailable. If this persists, daily summaries will not surface actionable insights for Santiago. Recommend connecting the M365 connector as a priority to restore full EOD functionality.</p>
+      <p>No email volume, sender clustering, meeting patterns, or recurring thread analysis could be performed today. All observations sections will remain empty until live data is available.</p>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>💡 Observations</h2>
-    <p>
-      No data available to surface patterns or insights at this time. Once the Microsoft 365 connector is active, this section will highlight email clusters, recurring threads, scheduling anomalies, and strategic attention items.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>📊 Email Stats</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Metric</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Received today</td><td><span class="badge badge-warn">N/A — connector offline</span></td></tr>
-        <tr><td>Sent today</td><td><span class="badge badge-warn">N/A — connector offline</span></td></tr>
-        <tr><td>Replied to</td><td><span class="badge badge-warn">N/A — connector offline</span></td></tr>
-        <tr><td>Unreplied</td><td><span class="badge badge-warn">N/A — connector offline</span></td></tr>
-      </tbody>
-    </table>
+  <!-- EMAIL STATS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">📊</span> Email Stats
+    </div>
+    <div class="section-body" style="padding: 0;">
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Received today</td>
+            <td class="value unavailable-note">Unavailable (M365 not connected)</td>
+          </tr>
+          <tr>
+            <td>Sent today</td>
+            <td class="value unavailable-note">Unavailable</td>
+          </tr>
+          <tr>
+            <td>Replied to</td>
+            <td class="value unavailable-note">Unavailable</td>
+          </tr>
+          <tr>
+            <td>Unreplied</td>
+            <td class="value unavailable-note">Unavailable</td>
+          </tr>
+          <tr>
+            <td>Filtered out (system/scam notifications)</td>
+            <td class="value unavailable-note">Unavailable</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>
 
-<div class="footer">
-  Generated by <span class="gold">Madison · Lisinski Law Firm AI</span> &nbsp;·&nbsp; 2026-05-13 17:20 COT
-</div>
+<footer>
+  Generated by <span>Madison · LLF AI Partner</span> &nbsp;·&nbsp;
+  Lisinski Law Firm &nbsp;·&nbsp; EOD Summary Pipeline v1.0<br/>
+  2026-05-14 at 19:06 COT &nbsp;·&nbsp; Next run: End of business day, 2026-05-15
+</footer>
 
 </body>
 </html>
