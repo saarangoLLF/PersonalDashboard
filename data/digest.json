@@ -1,8 +1,10 @@
 {
-  "lastUpdated": "2026-05-18T16:56:30Z",
-  "date": "2026-05-18",
-  "digestMarkdown": "# 🌅 Morning Digest — Monday, May 18, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ *Microsoft Outlook connector unavailable — email data could not be retrieved for this run. Please check your Outlook inbox directly for messages from priority senders (Danny Miller, Jessica Kim, Eugenia Barragan, Larry Marioth, Raquel Trujillo-Oria, Chelsea Schinnour).*\n\n## 💬 Teams — Active Conversations\n\n⚠️ *Microsoft Teams connector unavailable — chat message data could not be retrieved for this run. Please check Teams directly for any active threads or mentions.*\n\n## 📅 Today's Agenda\n\n⚠️ *Microsoft Calendar connector unavailable — calendar events could not be retrieved for this run. Please check your Outlook calendar directly for today's meetings.*\n\n## ⚡ Immediate Action\n\n⚠️ **Connector Issue** — The Microsoft 365 connectors (Outlook Email, Teams Chat, Outlook Calendar) were not available during this automated digest run. All three data sources returned no results. Santiago should verify connector status in Cowork settings and check Outlook/Teams directly this morning.\n\nNo immediate blockers from automated sources — but manual inbox check is recommended.",
+  "lastUpdated": "2026-05-19T13:26:10Z",
+  "date": "2026-05-19",
+  "digestMarkdown": "# Morning Digest - Tuesday, May 19, 2026\n\n## Emails Needing Attention\n\nWARNING: Microsoft 365 connector is not authenticated - email data could not be retrieved for this run. Please re-authenticate the MS365 plugin in Cowork settings so future runs can pull live data.\n\n## Teams - Active Conversations\n\nWARNING: Microsoft Teams data unavailable - same authentication issue as above. No chat messages could be retrieved.\n\n## Today's Agenda\n\nWARNING: Calendar data unavailable - Microsoft 365 connector requires re-authentication. Check your Outlook calendar directly for today's meetings.\n\n## Immediate Action\n\nAction required: The MS365 plugin needs to be re-authenticated. Open Cowork, go to Settings > Plugins > Microsoft 365, and reconnect your account. Once done, tomorrow's digest will include live email, Teams, and calendar data.\n\nNo immediate blockers from data sources - you are clear to focus, but please reconnect MS365 today.",
   "emailCount": 0,
   "meetingCount": 0,
-  "hasUrgent": false
+  "hasUrgent": false,
+  "ms365AuthRequired": true,
+  "note": "MS365 connector requires re-authentication. Data will be live once reconnected."
 }
