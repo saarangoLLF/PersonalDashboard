@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-05-21T13:20:22Z",
-  "date": "2026-05-21",
-  "digestMarkdown": "# \ud83c\udf05 Morning Digest \u2014 Thursday, May 21, 2026\n\n## \ud83d\udcec Emails Needing Attention\n\u26a0\ufe0f **Microsoft 365 connector unavailable** \u2014 The Outlook email tool requires re-authentication (OAuth). No email data could be retrieved for this run. Please reconnect the MS365 connector in Cowork settings to restore email digests.\n\n## \ud83d\udcac Teams \u2014 Active Conversations\n\u26a0\ufe0f **Microsoft 365 connector unavailable** \u2014 Teams/chat data could not be retrieved. Please reconnect the MS365 connector to restore Teams summaries.\n\n## \ud83d\udcc5 Today's Agenda\n\u26a0\ufe0f **Microsoft 365 connector unavailable** \u2014 Calendar events could not be retrieved for today. Please reconnect the MS365 connector to restore agenda data.\n\n## \u26a1 Immediate Action\n**Action required:** The Microsoft 365 connector needs to be re-authenticated. Until this is resolved, the morning digest cannot pull emails, Teams messages, or calendar events. Please open Cowork, navigate to Settings \u2192 Connectors, and reconnect Microsoft 365.",
+  "lastUpdated": "2026-05-22T13:25:21Z",
+  "date": "2026-05-22",
+  "digestMarkdown": "# 🌅 Morning Digest — Friday, May 22, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ **Microsoft 365 connector requires re-authentication.** Email data could not be retrieved for this run. Please reconnect the MS365 plugin in Cowork settings so future digests can pull your inbox.\n\n## 💬 Teams — Active Conversations\n\n⚠️ **Microsoft Teams data unavailable** — MS365 connector needs re-auth.\n\n## 📅 Today's Agenda\n\n⚠️ **Calendar data unavailable** — MS365 connector needs re-auth. Please check your calendar directly for today's meetings.\n\n## ⚡ Immediate Action\n\n**Action required:** The Microsoft 365 connector used to pull your emails, Teams messages, and calendar is not authenticated. Re-connect it in Cowork → Plugins → MS365 to restore your morning digest. No data could be retrieved for today's run.",
   "emailCount": 0,
   "meetingCount": 0,
   "hasUrgent": true
