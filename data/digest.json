@@ -1,1 +1,8 @@
-
+{
+  "lastUpdated": "2026-05-25T13:25:01Z",
+  "date": "2026-05-25",
+  "digestMarkdown": "# Morning Digest - Monday, May 25, 2026\n\n## Emails Needing Attention\nMicrosoft 365 connector unavailable - The Outlook connector requires re-authentication (OAuth session expired in automated run). Email data could not be retrieved.\n\nTo restore: open Cowork, start a new session with Madison, and re-connect the Microsoft 365 plugin.\n\n## Teams - Active Conversations\nMicrosoft 365 connector unavailable - Teams/chat data could not be retrieved for today's digest.\n\n## Today's Agenda\nMicrosoft 365 connector unavailable - Calendar data could not be retrieved for today's digest.\n\n## Immediate Action\nRECONNECT MICROSOFT 365 - The M365 connector is not authenticated in the current Cowork session. Until it is reconnected, the morning digest cannot pull emails, Teams messages, or calendar events. Please open Cowork and re-authorize the Microsoft 365 plugin to restore full digest functionality.",
+  "emailCount": 0,
+  "meetingCount": 0,
+  "hasUrgent": false
+}
