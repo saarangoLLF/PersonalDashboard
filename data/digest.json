@@ -1,8 +1,1 @@
-{
-  "lastUpdated": "2026-05-22T13:25:21Z",
-  "date": "2026-05-22",
-  "digestMarkdown": "# 🌅 Morning Digest — Friday, May 22, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ **Microsoft 365 connector requires re-authentication.** Email data could not be retrieved for this run. Please reconnect the MS365 plugin in Cowork settings so future digests can pull your inbox.\n\n## 💬 Teams — Active Conversations\n\n⚠️ **Microsoft Teams data unavailable** — MS365 connector needs re-auth.\n\n## 📅 Today's Agenda\n\n⚠️ **Calendar data unavailable** — MS365 connector needs re-auth. Please check your calendar directly for today's meetings.\n\n## ⚡ Immediate Action\n\n**Action required:** The Microsoft 365 connector used to pull your emails, Teams messages, and calendar is not authenticated. Re-connect it in Cowork → Plugins → MS365 to restore your morning digest. No data could be retrieved for today's run.",
-  "emailCount": 0,
-  "meetingCount": 0,
-  "hasUrgent": true
-}
+
