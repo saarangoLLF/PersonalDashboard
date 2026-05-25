@@ -3,231 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EOD Summary — May 22, 2026</title>
+  <title>EOD Summary — Santiago Arango — May 25, 2026</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f4f6fa;
-      color: #1a2340;
-      min-height: 100vh;
+      background: #f4f6f9;
+      color: #1a1a2e;
+      font-size: 15px;
+      line-height: 1.65;
     }
     header {
       background: #0A1628;
       color: #fff;
-      padding: 28px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
+      padding: 28px 32px 22px;
+      border-bottom: 4px solid #C9A84C;
     }
     header h1 {
-      font-size: 1.5rem;
+      font-size: 22px;
       font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-    header .subtitle {
-      font-size: 0.85rem;
-      color: #C9A84C;
-      margin-top: 4px;
+      letter-spacing: 0.4px;
+      color: #fff;
     }
     header .meta {
-      text-align: right;
-      font-size: 0.8rem;
-      color: #aab4c8;
-    }
-    .gold-bar {
-      height: 4px;
-      background: linear-gradient(90deg, #C9A84C 0%, #e8c96a 50%, #C9A84C 100%);
+      font-size: 13px;
+      color: #C9A84C;
+      margin-top: 6px;
+      font-weight: 500;
     }
     .container {
-      max-width: 860px;
+      max-width: 760px;
       margin: 32px auto;
       padding: 0 20px 60px;
     }
-    .alert-banner {
+    .notice {
       background: #fff3cd;
-      border-left: 4px solid #C9A84C;
+      border-left: 5px solid #C9A84C;
       border-radius: 6px;
       padding: 16px 20px;
       margin-bottom: 28px;
-      font-size: 0.9rem;
+      font-size: 14px;
       color: #7a5c00;
     }
-    .alert-banner strong { color: #5a4000; }
-    .card {
+    .notice strong { color: #5c4000; }
+    .section {
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(10,22,40,0.08);
-      margin-bottom: 24px;
-      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(10,22,40,0.08);
+      padding: 24px 28px;
+      margin-bottom: 20px;
     }
-    .card-header {
-      background: #0A1628;
-      color: #C9A84C;
-      padding: 14px 24px;
-      font-size: 1rem;
+    .section h2 {
+      font-size: 16px;
       font-weight: 700;
-      letter-spacing: 0.03em;
+      color: #0A1628;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
-    .card-body {
-      padding: 20px 24px;
-      font-size: 0.92rem;
-      line-height: 1.65;
-      color: #2c3a55;
+    .section h2 .icon { font-size: 18px; }
+    .section p, .section li {
+      color: #444;
+      font-size: 14px;
     }
-    .card-body p { margin-bottom: 10px; }
-    .card-body p:last-child { margin-bottom: 0; }
+    .section ul {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+    .section ul li { margin-bottom: 6px; }
     .unavailable {
-      color: #8a9ab8;
+      color: #888;
       font-style: italic;
+      font-size: 14px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.9rem;
+      margin-top: 10px;
+      font-size: 14px;
     }
-    table th {
-      background: #f0f3fa;
-      color: #0A1628;
-      font-weight: 600;
+    th {
+      background: #0A1628;
+      color: #C9A84C;
+      padding: 10px 14px;
       text-align: left;
-      padding: 10px 16px;
-      border-bottom: 2px solid #e0e6f0;
+      font-weight: 600;
+      font-size: 13px;
     }
-    table td {
-      padding: 10px 16px;
-      border-bottom: 1px solid #f0f3fa;
-      color: #2c3a55;
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #eee;
+      color: #333;
     }
-    table tr:last-child td { border-bottom: none; }
-    .stat-value {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #0A1628;
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #f9fafc; }
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
     }
-    .stat-label {
-      font-size: 0.78rem;
-      color: #8a9ab8;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 16px;
-    }
-    .stat-box {
-      background: #f4f6fa;
-      border-radius: 8px;
-      padding: 16px;
-      text-align: center;
-    }
+    .badge-warn { background: #fff3cd; color: #856404; }
     footer {
       text-align: center;
-      font-size: 0.75rem;
-      color: #aab4c8;
-      padding: 20px;
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 40px;
     }
+    footer span { color: #C9A84C; font-weight: 600; }
   </style>
 </head>
 <body>
 
 <header>
-  <div>
-    <h1>End-of-Day Summary</h1>
-    <div class="subtitle">Santiago Arango &mdash; Lisinski Law Firm</div>
-  </div>
-  <div class="meta">
-    <div><strong style="color:#C9A84C;">Friday, May 22, 2026</strong></div>
-    <div>Generated: 5:10 PM COT</div>
-    <div>saarango@lisinskifirm.com</div>
-  </div>
+  <h1>📋 End-of-Day Summary — Santiago Arango</h1>
+  <div class="meta">Monday, May 25, 2026 &nbsp;·&nbsp; Generated at 5:03 PM (Colombia Time) &nbsp;·&nbsp; Lisinski Law Firm</div>
 </header>
-<div class="gold-bar"></div>
 
 <div class="container">
 
-  <div class="alert-banner">
-    <strong>⚠️ Microsoft 365 Authorization Required</strong><br />
-    The Microsoft 365 connector (Outlook, Teams, Calendar) requires an active OAuth session to pull live data.
-    This automated run detected that the connector is not yet authorized for unattended access.
-    Santiago or an admin will need to open Cowork, authenticate the MS365 plugin, and re-run this task —
-    or enable a service-account token for background runs.<br /><br />
-    All sections below reflect this data gap. The GitHub Pages page and Supabase record have still been written
-    so the pipeline infrastructure is confirmed working.
+  <div class="notice">
+    <strong>⚠️ Data Source Unavailable:</strong> The Microsoft 365 connector (Outlook, Teams, Calendar) requires interactive OAuth authentication and could not be accessed during this automated run. Santiago must reconnect the M365 plugin in Cowork to enable live data in future runs. All sections below reflect this limitation.
   </div>
 
-  <!-- WHAT GOT DONE -->
-  <div class="card">
-    <div class="card-header">✅ What Got Done Today</div>
-    <div class="card-body">
-      <p class="unavailable">Outlook and Teams data unavailable — Microsoft 365 connector not authorized for this automated run.</p>
-      <p class="unavailable">Once the connector is authenticated, this section will list: emails sent that moved things forward, replies given, meetings completed, and decisions recorded in Teams threads.</p>
-    </div>
+  <!-- SECTION 1: What Got Done -->
+  <div class="section">
+    <h2><span class="icon">✅</span> What Got Done Today</h2>
+    <p class="unavailable">Unable to retrieve Outlook and Teams data — Microsoft 365 connector requires re-authentication. Please reconnect the M365 plugin in Cowork Settings to enable this section in future automated runs.</p>
   </div>
 
-  <!-- STILL PENDING -->
-  <div class="card">
-    <div class="card-header">⏳ Still Pending</div>
-    <div class="card-body">
-      <p class="unavailable">Cannot determine unreplied emails or unresolved Teams threads without live MS365 data.</p>
-      <p class="unavailable">After authorization, this section will highlight emails received today with no reply, open action items from Teams conversations, and any requests that appear unaddressed.</p>
-    </div>
+  <!-- SECTION 2: Still Pending -->
+  <div class="section">
+    <h2><span class="icon">⏳</span> Still Pending</h2>
+    <p class="unavailable">Pending email and Teams thread data could not be fetched. Reconnect the M365 connector to see unreplied emails and open action items here.</p>
+    <ul style="margin-top: 14px;">
+      <li><span class="badge badge-warn">Action Required</span> &nbsp; Reconnect Microsoft 365 in Cowork → Settings → Plugins → MS365</li>
+    </ul>
   </div>
 
-  <!-- TOMORROW MORNING -->
-  <div class="card">
-    <div class="card-header">📅 Tomorrow Morning</div>
-    <div class="card-body">
-      <p class="unavailable">Calendar data unavailable — Microsoft 365 connector not authorized.</p>
-      <p class="unavailable">Once connected, the first 3 events of Saturday, May 23 (or the next business day) will appear here with times in Colombia time (COT).</p>
-    </div>
+  <!-- SECTION 3: Tomorrow Morning -->
+  <div class="section">
+    <h2><span class="icon">📅</span> Tomorrow Morning</h2>
+    <p class="unavailable">Calendar data unavailable due to M365 authentication issue. Tomorrow's meetings cannot be previewed until the connector is restored.</p>
   </div>
 
-  <!-- OBSERVATIONS -->
-  <div class="card">
-    <div class="card-header">💡 Observations</div>
-    <div class="card-body">
-      <p><strong>Action needed:</strong> The Microsoft 365 OAuth session for the Cowork scheduled task needs to be re-established. Automated EOD runs require either a persistent delegated token or a service account credential — the current setup uses an interactive OAuth flow that expires between sessions.</p>
-      <p>Once resolved, this section will surface patterns: clustering emails, recurring threads, rescheduled meetings, and topics that need strategic attention.</p>
-    </div>
+  <!-- SECTION 4: Observations -->
+  <div class="section">
+    <h2><span class="icon">💡</span> Observations</h2>
+    <ul>
+      <li>The M365 OAuth token has expired or was never granted for this automated task. This is the <strong>primary blocker</strong> for all data in this summary.</li>
+      <li>To fix this permanently: open Cowork, go to the MS365 plugin, complete the OAuth flow once, and re-run the scheduled task. The token should then persist for future automated runs.</li>
+      <li>Today is Monday, May 25, 2026 — start of the work week. Catching up on any weekend emails and setting weekly priorities would be recommended once data access is restored.</li>
+    </ul>
   </div>
 
-  <!-- EMAIL STATS -->
-  <div class="card">
-    <div class="card-header">📊 Email Stats</div>
-    <div class="card-body">
-      <div class="stats-grid">
-        <div class="stat-box">
-          <div class="stat-value" style="color:#8a9ab8;">—</div>
-          <div class="stat-label">Received</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-value" style="color:#8a9ab8;">—</div>
-          <div class="stat-label">Sent</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-value" style="color:#8a9ab8;">—</div>
-          <div class="stat-label">Replied</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-value" style="color:#8a9ab8;">—</div>
-          <div class="stat-label">Unreplied</div>
-        </div>
-      </div>
-      <p style="margin-top:14px;" class="unavailable">Stats unavailable — MS365 connector not authorized.</p>
-    </div>
+  <!-- SECTION 5: Email Stats -->
+  <div class="section">
+    <h2><span class="icon">📊</span> Email Stats</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Emails received today</td><td class="unavailable">N/A — M365 auth required</td></tr>
+        <tr><td>Emails sent today</td><td class="unavailable">N/A — M365 auth required</td></tr>
+        <tr><td>Replied to</td><td class="unavailable">N/A</td></tr>
+        <tr><td>Unreplied</td><td class="unavailable">N/A</td></tr>
+        <tr><td>Meetings completed</td><td class="unavailable">N/A — Calendar unavailable</td></tr>
+        <tr><td>No-shows / cancellations</td><td class="unavailable">N/A</td></tr>
+      </tbody>
+    </table>
   </div>
 
 </div>
 
 <footer>
-  Lisinski Law Firm &mdash; Internal Use Only &bull; Generated by Madison (Cowork) &bull; 2026-05-22T17:10:09-05:00
+  Generated by <span>Madison · Lisinski Law Firm</span> &nbsp;·&nbsp; 2026-05-25T17:03:43-05:00
 </footer>
 
 </body>
