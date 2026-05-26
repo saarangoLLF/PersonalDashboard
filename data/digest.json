@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-05-25T13:25:01Z",
-  "date": "2026-05-25",
-  "digestMarkdown": "# Morning Digest - Monday, May 25, 2026\n\n## Emails Needing Attention\nMicrosoft 365 connector unavailable - The Outlook connector requires re-authentication (OAuth session expired in automated run). Email data could not be retrieved.\n\nTo restore: open Cowork, start a new session with Madison, and re-connect the Microsoft 365 plugin.\n\n## Teams - Active Conversations\nMicrosoft 365 connector unavailable - Teams/chat data could not be retrieved for today's digest.\n\n## Today's Agenda\nMicrosoft 365 connector unavailable - Calendar data could not be retrieved for today's digest.\n\n## Immediate Action\nRECONNECT MICROSOFT 365 - The M365 connector is not authenticated in the current Cowork session. Until it is reconnected, the morning digest cannot pull emails, Teams messages, or calendar events. Please open Cowork and re-authorize the Microsoft 365 plugin to restore full digest functionality.",
+  "lastUpdated": "2026-05-26T14:09:33Z",
+  "date": "2026-05-26",
+  "digestMarkdown": "# 🌅 Morning Digest — Tuesday, May 26, 2026\n\n## 📬 Emails Needing Attention\n⚠️ **Microsoft 365 connector unavailable** — The Outlook email tool requires re-authentication and could not run in this automated session. Please reconnect the MS365 plugin in Cowork settings to restore email monitoring.\n\n## 💬 Teams — Active Conversations\n⚠️ **Microsoft Teams connector unavailable** — Same authentication issue as above. Teams message monitoring is currently offline.\n\n## 📅 Today's Agenda\n⚠️ **Calendar data unavailable** — Outlook Calendar could not be queried this run. Check your calendar directly for today's meetings.\n\n## ⚡ Immediate Action\n**Action required:** The Microsoft 365 connector needs to be re-authenticated. Open Cowork, go to plugin settings, find the MS365 plugin, and complete the OAuth flow. Once done, tomorrow’s digest will resume normally.\n\n---\n*Note: This digest was generated without live data because the MS365 connector required interactive authentication, which cannot be completed during an automated run. All other pipeline steps (Supabase + GitHub Pages) are still executing.*",
   "emailCount": 0,
   "meetingCount": 0,
-  "hasUrgent": false
+  "hasUrgent": true
 }
