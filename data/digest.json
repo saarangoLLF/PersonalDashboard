@@ -1,9 +1,8 @@
 {
-  "lastUpdated": "2026-06-01T13:15:00Z",
-  "date": "2026-06-01",
-  "digestMarkdown": "# \ud83c\udf05 Morning Digest \u2014 Monday, June 1, 2026\n\n## \ud83d\udcec Emails Needing Attention\n\n\u26a0\ufe0f **Microsoft 365 connector is currently disconnected.** Email data could not be retrieved. Please reconnect the Microsoft connector in Cowork settings.\n\n## \ud83d\udcac Teams \u2014 Active Conversations\n\n\u26a0\ufe0f **Microsoft 365 connector is currently disconnected.** Teams messages could not be retrieved.\n\n## \ud83d\udcc5 Today's Agenda\n\n\u26a0\ufe0f **Microsoft 365 connector is currently disconnected.** Calendar data could not be retrieved.\n\n## \u26a1 Immediate Action\n\n\ud83d\udd34 **Action required:** The Microsoft 365 connector has been invalidated and needs to be reconnected. Until then, email, Teams, and calendar data will not appear in your morning digest. Please reconnect in Cowork \u2192 Settings \u2192 Connectors.",
+  "lastUpdated": "2026-06-03T13:24:48Z",
+  "date": "2026-06-03",
+  "digestMarkdown": "# \ud83c\udf05 Morning Digest \u2014 Wednesday, June 3, 2026\n\n## \ud83d\udcec Emails Needing Attention\n\u26a0\ufe0f **Microsoft 365 connector is disconnected** \u2014 email data could not be retrieved. Please reconnect the Microsoft 365 connector in Cowork settings to restore this feed.\n\n## \ud83d\udcac Teams \u2014 Active Conversations\n\u26a0\ufe0f **Microsoft 365 connector is disconnected** \u2014 Teams chat data could not be retrieved.\n\n## \ud83d\udcc5 Today's Agenda\n\u26a0\ufe0f **Microsoft 365 connector is disconnected** \u2014 calendar data could not be retrieved.\n\n## \u26a1 Immediate Action\n**Action required:** The Microsoft 365 connector has been invalidated and needs to be reconnected. Go to Cowork \u2192 Settings \u2192 Connectors and reconnect Microsoft 365 to restore your morning digest.",
   "emailCount": 0,
   "meetingCount": 0,
-  "hasUrgent": true,
-  "connectorStatus": "disconnected"
+  "hasUrgent": true
 }
