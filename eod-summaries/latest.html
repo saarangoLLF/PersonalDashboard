@@ -6,74 +6,70 @@
 <title>EOD Summary — 2026-06-03</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6fa; color: #1a2540; }
-  header { background: #0A1628; color: #fff; padding: 28px 32px 20px; }
-  header h1 { font-size: 1.5rem; font-weight: 700; }
-  header p { color: #C9A84C; font-size: 0.85rem; margin-top: 6px; }
-  .container { max-width: 760px; margin: 32px auto; padding: 0 16px 48px; }
-  .card { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(10,22,40,0.08); margin-bottom: 20px; padding: 24px 28px; }
-  .card h2 { font-size: 1.1rem; color: #0A1628; margin-bottom: 12px; }
-  .card p, .card li { font-size: 0.95rem; line-height: 1.65; color: #2c3e60; }
-  .card ul { padding-left: 18px; }
-  .card li { margin-bottom: 6px; }
-  .alert { background: #fff8e6; border-left: 4px solid #C9A84C; border-radius: 6px; padding: 14px 18px; font-size: 0.92rem; color: #6b4e00; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #1a1a2e; }
+  header { background: #0A1628; color: #fff; padding: 28px 32px; }
+  header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: 0.5px; }
+  header .subtitle { color: #C9A84C; font-size: 0.9rem; margin-top: 6px; }
+  .container { max-width: 820px; margin: 32px auto; padding: 0 16px; }
+  .card { background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); padding: 28px 32px; margin-bottom: 22px; }
+  .card h2 { font-size: 1.1rem; color: #0A1628; margin-bottom: 14px; border-bottom: 2px solid #C9A84C; padding-bottom: 8px; }
+  .card p, .card li { font-size: 0.95rem; line-height: 1.7; color: #333; }
+  .card ul { padding-left: 20px; }
+  .alert { background: #fff8e6; border-left: 4px solid #C9A84C; border-radius: 6px; padding: 16px 20px; }
+  .alert p { color: #7a5c00; font-size: 0.92rem; }
   table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-  th { background: #0A1628; color: #C9A84C; padding: 10px 14px; text-align: left; font-size: 0.85rem; }
-  td { padding: 9px 14px; border-bottom: 1px solid #e8ecf3; font-size: 0.92rem; }
+  th { background: #0A1628; color: #C9A84C; text-align: left; padding: 10px 14px; font-size: 0.88rem; }
+  td { padding: 9px 14px; font-size: 0.92rem; border-bottom: 1px solid #eee; }
   tr:last-child td { border-bottom: none; }
-  .badge { display: inline-block; background: #f0f4ff; color: #0A1628; border-radius: 4px; padding: 2px 8px; font-size: 0.78rem; font-weight: 600; margin-left: 6px; }
-  footer { text-align: center; font-size: 0.78rem; color: #8896b0; margin-top: 32px; }
+  footer { text-align: center; color: #999; font-size: 0.8rem; padding: 24px 0 40px; }
 </style>
 </head>
 <body>
 <header>
   <h1>📋 End-of-Day Summary — Santiago Arango</h1>
-  <p>Wednesday, June 3, 2026 &nbsp;|&nbsp; Generated: 2026-06-03 at 5:00 PM (Colombia time)</p>
+  <div class="subtitle">Generated: June 03, 2026 at 05:11 PM (Colombia Time) &nbsp;|&nbsp; Date: 2026-06-03</div>
 </header>
 <div class="container">
 
   <div class="card alert">
-    ⚠️ <strong>Data Unavailable:</strong> The Microsoft 365 connector (Outlook, Teams, Calendar) is currently disconnected. Email, chat, and calendar data could not be retrieved for today. Please reconnect the connector in Cowork settings to restore automatic data collection for future summaries.
+    <h2>⚠️ Data Unavailable — Microsoft 365 Authentication Required</h2>
+    <p>This automated summary run could not retrieve emails, Teams messages, or calendar data because the Microsoft 365 connector requires an interactive OAuth authorization that must be completed by the user in a browser. Scheduled/autonomous runs cannot complete this flow without a pre-authorized token.</p>
+    <br/>
+    <p><strong>To fix this:</strong> Open Cowork, start a new session, and authorize the Microsoft 365 connector when prompted. Once authorized, subsequent scheduled runs will be able to pull your data automatically — as long as the token remains valid.</p>
   </div>
 
   <div class="card">
     <h2>✅ What Got Done Today</h2>
-    <p>No data available — Microsoft 365 connector is disconnected. Once reconnected, this section will summarize emails sent, meetings completed, replies given, and decisions made.</p>
+    <p>No data available — Microsoft 365 connector authentication was required but could not be completed in this automated run. Email, Teams, and calendar activity could not be retrieved.</p>
   </div>
 
   <div class="card">
     <h2>⏳ Still Pending</h2>
-    <p>No data available. Once the connector is restored, unreplied emails, unresolved Teams threads, and outstanding action items will appear here.</p>
+    <p>Unable to determine pending items without access to email and Teams data. Please review your inbox and Teams notifications manually for today's outstanding items.</p>
   </div>
 
   <div class="card">
     <h2>📅 Tomorrow Morning</h2>
-    <p>No calendar data available. Reconnect the Microsoft 365 connector to see tomorrow's first three meetings.</p>
+    <p>Calendar data was not accessible. Please check your Outlook calendar for tomorrow's schedule.</p>
   </div>
 
   <div class="card">
     <h2>💡 Observations</h2>
-    <ul>
-      <li>The Microsoft 365 connector appears to have been invalidated (token expired or revoked). This is the second consecutive day without data if the issue is not resolved today.</li>
-      <li>Action needed: Go to Cowork → Connectors → Microsoft 365 and click <strong>Reconnect</strong>. No data will be captured until this is done.</li>
-    </ul>
+    <p>The Microsoft 365 connector's OAuth token needs to be established via an interactive session before this scheduled task can function as designed. Consider running the EOD summary manually once to authorize the connector, then the scheduled version should work in subsequent runs if the token is long-lived.</p>
   </div>
 
   <div class="card">
     <h2>📊 Email Stats</h2>
     <table>
-      <thead><tr><th>Metric</th><th>Value</th></tr></thead>
-      <tbody>
-        <tr><td>Received today</td><td>—</td></tr>
-        <tr><td>Sent today</td><td>—</td></tr>
-        <tr><td>Replied to</td><td>—</td></tr>
-        <tr><td>Unreplied</td><td>—</td></tr>
-      </tbody>
+      <tr><th>Metric</th><th>Count</th></tr>
+      <tr><td>Received today</td><td>N/A</td></tr>
+      <tr><td>Sent today</td><td>N/A</td></tr>
+      <tr><td>Replied to</td><td>N/A</td></tr>
+      <tr><td>Unreplied</td><td>N/A</td></tr>
     </table>
-    <p style="margin-top:10px;font-size:0.82rem;color:#8896b0;">Data unavailable — connector disconnected.</p>
   </div>
 
-  <footer>Lisinski Law Firm · Madison AI Platform · EOD Summary for saarango@lisinskifirm.com</footer>
 </div>
+<footer>Lisinski Law Firm &nbsp;|&nbsp; EOD Summary &nbsp;|&nbsp; Powered by Madison</footer>
 </body>
 </html>
