@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-06-03T13:24:48Z",
-  "date": "2026-06-03",
-  "digestMarkdown": "# \ud83c\udf05 Morning Digest \u2014 Wednesday, June 3, 2026\n\n## \ud83d\udcec Emails Needing Attention\n\u26a0\ufe0f **Microsoft 365 connector is disconnected** \u2014 email data could not be retrieved. Please reconnect the Microsoft 365 connector in Cowork settings to restore this feed.\n\n## \ud83d\udcac Teams \u2014 Active Conversations\n\u26a0\ufe0f **Microsoft 365 connector is disconnected** \u2014 Teams chat data could not be retrieved.\n\n## \ud83d\udcc5 Today's Agenda\n\u26a0\ufe0f **Microsoft 365 connector is disconnected** \u2014 calendar data could not be retrieved.\n\n## \u26a1 Immediate Action\n**Action required:** The Microsoft 365 connector has been invalidated and needs to be reconnected. Go to Cowork \u2192 Settings \u2192 Connectors and reconnect Microsoft 365 to restore your morning digest.",
+  "lastUpdated": "2026-06-04T13:25:49Z",
+  "date": "2026-06-04",
+  "digestMarkdown": "# 🌅 Morning Digest — Thursday, June 4, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ **Microsoft 365 connector requires re-authentication.** Outlook data could not be retrieved for this automated run. Please re-connect the MS365 plugin in Cowork settings so tomorrow's digest can pull your emails automatically.\n\n## 💬 Teams — Active Conversations\n\n⚠️ Teams data unavailable — same connector issue as above. No messages could be retrieved.\n\n## 📅 Today's Agenda\n\n⚠️ Calendar data unavailable — Microsoft 365 connector needs re-authentication.\n\n## ⚡ Immediate Action\n\n**Re-authenticate the Microsoft 365 connector in Cowork** so the morning digest can access your Outlook, Teams, and Calendar data. Without it, this digest will continue running but cannot surface your emails, meetings, or messages.\n\n---\n*This digest was generated automatically by Madison at 2026-06-04T13:25:49Z. Microsoft 365 connector was offline — all sections reflect unavailable data.*",
   "emailCount": 0,
   "meetingCount": 0,
-  "hasUrgent": true
+  "hasUrgent": false
 }
