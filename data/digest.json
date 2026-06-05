@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-06-04T13:25:49Z",
-  "date": "2026-06-04",
-  "digestMarkdown": "# 🌅 Morning Digest — Thursday, June 4, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ **Microsoft 365 connector requires re-authentication.** Outlook data could not be retrieved for this automated run. Please re-connect the MS365 plugin in Cowork settings so tomorrow's digest can pull your emails automatically.\n\n## 💬 Teams — Active Conversations\n\n⚠️ Teams data unavailable — same connector issue as above. No messages could be retrieved.\n\n## 📅 Today's Agenda\n\n⚠️ Calendar data unavailable — Microsoft 365 connector needs re-authentication.\n\n## ⚡ Immediate Action\n\n**Re-authenticate the Microsoft 365 connector in Cowork** so the morning digest can access your Outlook, Teams, and Calendar data. Without it, this digest will continue running but cannot surface your emails, meetings, or messages.\n\n---\n*This digest was generated automatically by Madison at 2026-06-04T13:25:49Z. Microsoft 365 connector was offline — all sections reflect unavailable data.*",
+  "lastUpdated": "2026-06-05T13:22:30Z",
+  "date": "2026-06-05",
+  "digestMarkdown": "# 🌅 Morning Digest — Friday, June 5, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ **Microsoft 365 connector unavailable** — The Outlook email tools could not be reached during this automated run. Please check your MS365 connector authentication in Cowork settings.\n\nNo emails could be retrieved for this digest.\n\n## 💬 Teams — Active Conversations\n\n⚠️ **Microsoft Teams connector unavailable** — The Teams/chat message tools could not be reached during this automated run.\n\nNo Teams messages could be retrieved for this digest.\n\n## 📅 Today's Agenda\n\n⚠️ **Calendar unavailable** — Outlook calendar tools could not be reached during this automated run.\n\nNo calendar events could be retrieved for this digest.\n\n## ⚡ Immediate Action\n\n**MS365 connector needs attention.** Open Cowork → Settings → Connectors → Microsoft 365 and re-authenticate. Once reconnected, tomorrow's digest will pull full data automatically.",
   "emailCount": 0,
   "meetingCount": 0,
   "hasUrgent": false
