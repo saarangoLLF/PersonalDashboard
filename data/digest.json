@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-06-05T13:22:30Z",
-  "date": "2026-06-05",
-  "digestMarkdown": "# 🌅 Morning Digest — Friday, June 5, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ **Microsoft 365 connector unavailable** — The Outlook email tools could not be reached during this automated run. Please check your MS365 connector authentication in Cowork settings.\n\nNo emails could be retrieved for this digest.\n\n## 💬 Teams — Active Conversations\n\n⚠️ **Microsoft Teams connector unavailable** — The Teams/chat message tools could not be reached during this automated run.\n\nNo Teams messages could be retrieved for this digest.\n\n## 📅 Today's Agenda\n\n⚠️ **Calendar unavailable** — Outlook calendar tools could not be reached during this automated run.\n\nNo calendar events could be retrieved for this digest.\n\n## ⚡ Immediate Action\n\n**MS365 connector needs attention.** Open Cowork → Settings → Connectors → Microsoft 365 and re-authenticate. Once reconnected, tomorrow's digest will pull full data automatically.",
+  "lastUpdated": "2026-06-10T12:42:34Z",
+  "date": "2026-06-10",
+  "digestMarkdown": "# 🌅 Morning Digest — Wednesday, June 10, 2026\n\n## 📬 Emails Needing Attention\n⚠️ **Microsoft connector unavailable** — The Outlook email tool could not be reached during this automated run. Email data could not be retrieved. Please check your inbox manually and reconnect the Microsoft connector if needed.\n\n## 💬 Teams — Active Conversations\n⚠️ **Microsoft connector unavailable** — Teams/chat data could not be retrieved during this automated run.\n\n## 📅 Today's Agenda\n⚠️ **Microsoft connector unavailable** — Calendar data could not be retrieved during this automated run. Please check your calendar directly.\n\n## ⚡ Immediate Action\n⚠️ **Microsoft tools offline** — This digest was generated without live data. Reconnect the Microsoft connector in Cowork settings to restore full functionality. No blockers confirmed from automated sources.",
   "emailCount": 0,
   "meetingCount": 0,
   "hasUrgent": false
