@@ -1,8 +1,9 @@
 {
-  "lastUpdated": "2026-06-11T13:19:11Z",
-  "date": "2026-06-11",
-  "digestMarkdown": "# Morning Digest - Thursday, June 11, 2026\n\n## Emails Needing Attention\nMicrosoft Outlook connector unavailable. Email data could not be retrieved this run. Please check inbox manually or reconnect Outlook in Cowork settings.\n\n## Teams - Active Conversations\nMicrosoft Teams connector unavailable. Chat data could not be retrieved this run.\n\n## Todays Agenda\nMicrosoft Calendar connector unavailable. Calendar data could not be retrieved this run.\n\n## Immediate Action\nMicrosoft connectors (Outlook + Teams) unreachable during automated run. Reconnect the Microsoft 365 integration in Cowork Settings to restore full digest functionality.",
+  "lastUpdated": "2026-06-12T13:25:30Z",
+  "date": "2026-06-12",
+  "digestMarkdown": "# 🌅 Morning Digest — Friday, June 12, 2026\n\n## 📬 Emails Needing Attention\n\n⚠️ **Microsoft Outlook connector unavailable** — email data could not be retrieved this run. Please check your Outlook directly for messages from priority senders (Danny Miller, Jessica Kim, Eugenia Barragan, Larry Marioth, Raquel Trujillo-Oria, Chelsea Schinnour).\n\n## 💬 Teams — Active Conversations\n\n⚠️ **Microsoft Teams connector unavailable** — Teams message data could not be retrieved this run.\n\n## 📅 Today's Agenda\n\n⚠️ **Microsoft Calendar connector unavailable** — calendar data could not be retrieved this run. Please check your calendar directly.\n\n## ⚡ Immediate Action\n\n**Connector issue detected.** The Microsoft 365 connector tools were not available during this digest run. All three data sources (Email, Teams, Calendar) returned no data. Santiago should verify connector health in Cowork settings and check communications manually today.",
   "emailCount": 0,
   "meetingCount": 0,
-  "hasUrgent": false
+  "hasUrgent": true,
+  "connectorError": "Microsoft 365 connector tools unavailable in sandbox"
 }
