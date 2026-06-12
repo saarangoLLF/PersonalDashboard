@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Summary — June 8–12, 2026 | Santiago Arango</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f4f6f9;
+      color: #1a1a2e;
+      min-height: 100vh;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: #fff;
+      padding: 36px 48px 32px;
+      border-bottom: 4px solid #e94560;
+    }
+    header .firm { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #a0aec0; margin-bottom: 8px; }
+    header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+    header .meta { font-size: 14px; color: #a0aec0; }
+    .notice-banner {
+      background: #fff3cd;
+      border-left: 4px solid #f59e0b;
+      padding: 14px 48px;
+      font-size: 14px;
+      color: #92400e;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 36px 24px 60px; }
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      border: 1px solid #e2e8f0;
+    }
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0f3460;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 12px;
+    }
+    .section p, .section li { font-size: 15px; line-height: 1.7; color: #4a5568; }
+    .section ul { padding-left: 20px; }
+    .section li { margin-bottom: 6px; }
+    .no-data {
+      font-style: italic;
+      color: #a0aec0;
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 16px 20px;
+      border: 1px dashed #cbd5e0;
+      font-size: 14px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+    }
+    .stat-card {
+      background: #f4f6f9;
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+    .stat-card .value { font-size: 32px; font-weight: 800; color: #0f3460; line-height: 1; }
+    .stat-card .label { font-size: 12px; color: #718096; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .connector-alert {
+      background: #ebf4ff;
+      border: 1px solid #bee3f8;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #2b6cb0;
+      margin-top: 16px;
+    }
+    .connector-alert strong { display: block; margin-bottom: 4px; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: #a0aec0;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="firm">Lisinski Law Firm</div>
+  <h1>Weekly Summary — June 8–12, 2026</h1>
+  <div class="meta">Santiago Arango &nbsp;·&nbsp; saarango@lisinskifirm.com &nbsp;·&nbsp; Generated Friday, June 12, 2026</div>
+</header>
+
+<div class="notice-banner">
+  ⚠️ <strong>Data Notice:</strong> Microsoft 365 connectors (Outlook, Teams, Calendar) were not reachable during this automated run. The sections below reflect this gap. Connect the Microsoft 365 MCP plugin to unlock full weekly data.
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <h2>🏆 Wins of the Week</h2>
+    <div class="no-data">No email or calendar data could be retrieved this run. Once Microsoft 365 connectors are active, completed cases, resolved tickets, and closed action items will appear here.</div>
+    <div class="connector-alert">
+      <strong>Action required:</strong> To enable this section, connect the Microsoft Outlook / Microsoft 365 plugin in Cowork → Settings → Plugins.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📊 Recurring Themes</h2>
+    <div class="no-data">Requires Outlook and Teams data to identify conversation patterns. No themes detected this run.</div>
+  </div>
+
+  <div class="section">
+    <h2>⚠️ Open Items</h2>
+    <div class="no-data">No open items could be surfaced. Pending replies, unresolved threads, and upcoming deadlines will appear here once connectors are active.</div>
+  </div>
+
+  <div class="section">
+    <h2>👥 Key People This Week</h2>
+    <div class="no-data">Top correspondents and collaborators will be listed here once email and Teams data is available.</div>
+  </div>
+
+  <div class="section">
+    <h2>🎯 Suggestions for Next Week</h2>
+    <ul>
+      <li>Connect the Microsoft 365 MCP plugin so Madison can pull live Outlook, Teams, and Calendar data automatically each Friday.</li>
+      <li>Verify the Supabase <code>weekly_summaries</code> table exists and has the expected schema (see footer note).</li>
+      <li>Once connectors are live, this summary will self-populate with wins, open items, and meeting recaps every week without any manual effort.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📈 Quick Stats</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="value">—</div><div class="label">Emails Received</div></div>
+      <div class="stat-card"><div class="value">—</div><div class="label">Emails Sent</div></div>
+      <div class="stat-card"><div class="value">—</div><div class="label">Teams Threads</div></div>
+      <div class="stat-card"><div class="value">—</div><div class="label">Meetings Attended</div></div>
+      <div class="stat-card"><div class="value">—</div><div class="label">Meetings Cancelled</div></div>
+      <div class="stat-card"><div class="value">—</div><div class="label">Top Correspondent</div></div>
+    </div>
+    <div class="connector-alert" style="margin-top:18px;">
+      <strong>Why are these blank?</strong> Microsoft 365 (Outlook + Teams + Calendar) connectors are not yet connected in this Cowork session. Real stats will populate here once the integration is active.
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Generated by Madison &nbsp;|&nbsp; Lisinski Law Firm &nbsp;|&nbsp; Week of June 8–12, 2026<br/>
+  <span style="font-size:11px; color:#cbd5e0;">This report is auto-generated every Friday. Data sourced from Outlook, Microsoft Teams, and Outlook Calendar via MCP connectors.</span>
+</footer>
+
+</body>
+</html>
